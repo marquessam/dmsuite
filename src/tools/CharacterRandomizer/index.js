@@ -130,7 +130,7 @@ export default function CharacterRandomizer() {
     }));
   };
   
-   // Generate a character on component mount
+  // Generate a character on component mount
   useEffect(() => {
     generateCharacter();
   }, [generateCharacter]);
@@ -141,7 +141,7 @@ export default function CharacterRandomizer() {
     if (character) {
       generateCharacter();
     }
-  }, [selectedRace, selectedClass, selectedDeity]);
+  }, [selectedRace, selectedClass, selectedDeity, character, generateCharacter]);
   
   return (
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl md:max-w-2xl">
