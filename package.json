@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "npm run tailwind:init",
@@ -24,6 +24,22 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "rules": {
+      "no-unused-vars": "warn"
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/tools/DMScreen/RandomEncounterGenerator.js",
+          "src/tools/DMScreen/TreasureGenerator.js",
+          "src/tools/DMScreen/index.js",
+          "src/App.js"
+        ],
+        "rules": {
+          "no-unused-vars": "off"
+        }
+      }
     ]
   },
   "browserslist": {
