@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Import all data from a single file
 import { 
@@ -13,26 +13,26 @@ import {
   namePrefixes, 
   nameSuffixes, 
   lastNames 
-} from '../../data/characterRandomizerData.js';
+} from '../../data/characterRandomizerData';
 
 export default function CharacterRandomizer() {
   const [character, setCharacter] = useState(null);
   
-  // Get a random item from an array - memoized to avoid re-creation
-  const getRandomItem = useCallback((array) => {
+  // Get a random item from an array
+  const getRandomItem = (array) => {
     return array[Math.floor(Math.random() * array.length)];
-  }, []);
+  };
   
-  // Generate a random name with useCallback
-  const generateName = useCallback(() => {
+  // Generate a random name
+  const generateName = () => {
     const prefix = getRandomItem(namePrefixes);
     const suffix = getRandomItem(nameSuffixes);
     const lastName = getRandomItem(lastNames);
     return `${prefix}${suffix} ${lastName}`;
-  }, [getRandomItem]);
+  };
   
-  // Find suitable deities for a character with useCallback
-  const findDeities = useCallback((race, charClass) => {
+  // Find suitable deities for a character
+  const findDeities = (race, charClass) => {
     // Get deities that match either the race or class
     const matchingDeities = deities.filter(deity => 
       deity.followers.includes(race) || 
@@ -41,10 +41,14 @@ export default function CharacterRandomizer() {
     
     // Return matching deities or a random selection if none match
     return matchingDeities.length > 0 ? matchingDeities : [getRandomItem(deities)];
-  }, [getRandomItem]);
+  };
   
-  // Generate a random character using useCallback
-  const generateCharacter = useCallback(() => {
+  // Generate a random character
+  const generateCharacter = () => {
+    console.log("Generating character...");
+    console.log("Available races:", races);
+    console.log("Available classes:", classes);
+    
     const race = getRandomItem(races);
     const charClass = getRandomItem(classes);
     const background = getRandomItem(backgrounds);
@@ -56,6 +60,12 @@ export default function CharacterRandomizer() {
     const suitableDeities = findDeities(race, charClass);
     const primaryDeity = getRandomItem(suitableDeities);
     const alternateDeities = suitableDeities.filter(d => d !== primaryDeity).slice(0, 2);
+    
+    console.log("Generated character:", {
+      name,
+      race,
+      class: charClass
+    });
     
     setCharacter({
       name,
@@ -69,12 +79,12 @@ export default function CharacterRandomizer() {
       deity: primaryDeity,
       alternateDeities: alternateDeities
     });
-  }, [getRandomItem, generateName, findDeities]);
+  };
   
   // Generate a character on component mount
   useEffect(() => {
     generateCharacter();
-  }, [generateCharacter]);
+  }, []);
   
   return (
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl">
