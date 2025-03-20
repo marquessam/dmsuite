@@ -4,7 +4,7 @@ import { encounterData } from '../../data/dmScreenData';
 
 // Additional monsters by environment
 const monstersByEnvironment = {
-  Dungeon: {
+ Dungeon: {
     'easy': [
       { name: 'Goblin', cr: '1/4', count: '4-8', notes: 'Stealthy, uses ambush tactics' },
       { name: 'Skeleton', cr: '1/4', count: '4-6', notes: 'Immune to poison and exhaustion' },
@@ -21,7 +21,7 @@ const monstersByEnvironment = {
       { name: 'Mimic', cr: '2', count: '1', notes: 'Disguises as chest or door' },
       { name: 'Gelatinous Cube', cr: '2', count: '1', notes: 'Engulfs creatures, transparent' },
       { name: 'Ogre', cr: '2', count: '1-2', notes: 'Brute strength' },
-      { name: 'Will-o'-Wisp', cr: '2', count: '1-3', notes: 'Invisible, consume life force' }
+      { name: 'Will-o\'-Wisp', cr: '2', count: '1-3', notes: 'Invisible, consume life force' }
     ],
     'deadly': [
       { name: 'Minotaur', cr: '3', count: '1-2', notes: 'Maze navigation, charge attack' },
