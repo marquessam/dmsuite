@@ -6,4 +6,10 @@ export { backgrounds } from './characterRandomizer/backgrounds';
 export { features } from './characterRandomizer/features';
 export { appearances } from './characterRandomizer/appearances';
 export { deities } from './characterRandomizer/deities';
-export { namePrefixes, nameSuffixes, lastNames } from './characterRandomizer/nameComponents';
+export { 
+  namePrefixes, 
+  nameSuffixes, 
+  lastNamePrefixes, 
+  lastNameSuffixes, 
+  getRaceNameComponents 
+} from './characterRandomizer/nameComponents';
