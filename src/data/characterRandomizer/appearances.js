@@ -606,5 +606,381 @@ export const appearances = {
     "Tough with brown feathers, a wide wingspan, and a gruff demeanor, always ready for a fight but never showing emotion.",
     "Charming with soft, pastel feathers, a melodic voice that can soothe the most anxious heart, and an infectious smile.",
     "Wild with untamed feathers of various shades, a beak sharp enough to pierce steel, and a voice like a lion's roar."
-]
+],
+  'Aarakocra': [
+    "Covered in bright blue feathers with a yellow crest that rises when excited, with keen eyes that constantly scan the horizon.",
+    "Sleek with aerodynamic raven-black plumage, sharp talons, and piercing yellow eyes that miss nothing in their field of vision.",
+    "Adorned with vibrant tropical plumage in greens and reds, with a curved hawk-like beak and delicate wingspans that shimmer in sunlight.",
+    "Compact with brown and white speckled feathers, reminiscent of an owl, with an unusually expressive face and round golden eyes.",
+    "Tall with a stork-like elegance, featuring pristine white feathers with black wingtips and long, powerful legs built for both running and soaring.",
+    "Muscular with eagle-like brown and golden feathers, a fierce curved beak, and a wingspan that casts impressive shadows when spread.",
+    "Slender with iridescent hummingbird-like plumage that shimmers between green and purple, with a delicate beak and incredibly fast-moving wings.",
+    "Robust with falcon features, gray and white patterned feathers, and sharp eyes that can spot prey from incredible distances.",
+    "Graceful with crane-like features, tall and elegant with flowing decorative feathers that drift behind when walking or flying.",
+    "Striking with hawk-like features, rust-colored feathers with cream accents, and talons adorned with tribal metal rings."
+  ],
+  
+  'Aasimar': [
+    "Radiantly beautiful with golden eyes that occasionally emit divine light when emotional, and hair that seems to glow with inner luminescence.",
+    "Tall and imposing with metallic silver hair, eyes like polished moonstones, and skin that seems to subtly illuminate the surrounding area.",
+    "Slender with perfect features, hair white as fresh snow, and eyes that shift through rainbow hues when using their celestial powers.",
+    "Statuesque with bronzed skin that has a subtle metallic sheen, eyes of pure gold, and an aura of calm that affects all nearby.",
+    "Ethereal beauty with platinum blonde hair that floats as if underwater, opalescent eyes, and small crystalline patterns along the temples.",
+    "Regal bearing with obsidian skin that seems to contain pinpricks of starlight, eyes of solid blue with no pupils or whites, and a voice that resonates with harmonic overtones.",
+    "Commanding presence with copper-toned skin that glows faintly in darkness, eyes like amber gemstones, and feather-like patterns naturally occurring on their forearms.",
+    "Otherworldly grace with pale skin that seems translucent in strong light, revealing glimpses of golden energy beneath, and irises that shine like polished silver.",
+    "Divine countenance with rich mahogany skin, luminous violet eyes, and hair that shifts colors according to their mood—from serene blue to passionate crimson.",
+    "Majestic demeanor with skin that seems dusted with diamond powder, hair that shimmers like spun gold, and eyes that glow with inner light when they call upon their celestial heritage."
+  ],
+  
+  'Bugbear': [
+    "Towering and lanky with shaggy orange-brown fur, elongated arms ending in vicious claws, and small, cunning yellow eyes beneath a prominent brow.",
+    "Hulking with dirty yellow fur matted and stained, powerful long arms, and a hunched posture that belies their ability to spring suddenly into action.",
+    "Massive with dark brown fur and a surprisingly sleek, predatory movement, yellow fangs jutting from their lower jaw, and black claws sharp as daggers.",
+    "Surprisingly stealthy despite their size, with patchy grey fur, long gangly limbs, and a face permanently set in a toothy snarl.",
+    "Intimidating with rust-colored fur, unnaturally long arms that nearly drag on the ground, and amber eyes that seem to glow in the shadows.",
+    "Muscular with thick dark fur covering most of their body, beady eyes that reflect light like a predator's, and unusually sharp curved claws.",
+    "Rangy with greasy brown fur, arms so long they can attack from unexpected reach, and a slouched stance that makes them appear smaller than they are.",
+    "Powerfully built with mottled tan and black fur, a jutting muzzle filled with sharp teeth, and hands large enough to crush a human skull.",
+    "Brutish with patchy gray and black fur, surprisingly quiet movements, and arms so long they can scratch their ankles without bending over.",
+    "Formidable with dark, matted fur, a perpetual feral snarl, and limbs that seem almost too long for their body, giving them an unsettling, spider-like quality when they move quickly."
+  ],
+  
+  'Changeling': [
+    "At rest, they appear as a slender humanoid with pale, featureless skin, minimal facial features, and silver-white hair—a blank canvas awaiting transformation.",
+    "Currently wearing a human merchant's visage, but attentive eyes might notice the subtle fluidity of their features, as if their face isn't quite fixed in place.",
+    "Pale with androgynous features that seem to subtly shift when not directly observed, eyes that change color depending on the light, and hair of indeterminate color.",
+    "Appearing as a half-elf noble with perfect features, only the unnaturally steady gaze betrays their true nature to the most observant.",
+    "Minimal and elegant, with alabaster skin, features that could be either masculine or feminine, and eyes like liquid mercury that catch the light strangely.",
+    "Currently mimicking a specific human, but occasionally their concentration slips, causing features to momentarily flow like wax before stabilizing.",
+    "Slender with skin like polished ivory, silver-white hair, and colorless eyes—a deliberately neutral form chosen to conserve energy between transformations.",
+    "Quick to adopt new appearances, their true form has chalk-white skin, subtle features, and a fluidity to their movements that suggests nothing is permanent.",
+    "In natural form, they appear ghostly and unfinished, with milky skin, minimal facial features, and hair and eyes of such a pale color they seem nearly transparent.",
+    "Shifting subtly between masculine and feminine features even in their natural state, with skin that seems to ripple occasionally like the surface of disturbed water."
+  ],
+  
+  'Duergar (Grey Dwarf)': [
+    "Stocky with ash-grey skin hard as stone, a bald head covered in ritual scars, and eyes like obsidian that reflect no light.",
+    "Broad-shouldered with pale grey skin, a neatly trimmed iron-grey beard, and dark, sunken eyes that hold centuries of bitterness.",
+    "Compact and muscular with skin the color of granite, a bald head, and eyes so black they seem to absorb light rather than reflect it.",
+    "Thick-limbed with stony grey skin, a braided steel-colored beard, and coal-black eyes that betray no emotion.",
+    "Sturdy with charcoal-grey skin, a meticulously groomed dark beard adorned with small metal rings, and eyes like the darkest depths of a mine shaft.",
+    "Short but powerful with slate-grey skin, a completely shaved head revealing rune-like tattoos, and eyes that flash crimson when using psionic abilities.",
+    "Stout with skin like polished hematite, a thick silver-streaked beard, and eyes that contain the cold, unfeeling darkness of the deep Underdark.",
+    "Powerfully built with ashen skin, a beard braided with adamantine wire, and dark eyes that seem to perceive even in perfect darkness.",
+    "Broad with skin the color of dark stone, rune-carved armor that seems fused to their body, and eyes like black holes that reveal nothing of their thoughts.",
+    "Grizzled with skin like cold iron, a tangled beard containing small ornamental anvils, and eyes dark as the unlit depths of abandoned mineshafts."
+  ],
+  
+  'Firbolg': [
+    "Towering but gentle, with blue-grey skin, flowing silvery hair, and a beard woven with small woodland flowers and ferns.",
+    "Massive yet soft-spoken, with moss-green skin, antler-like growths protruding from their forehead, and eyes the deep brown of fertile soil.",
+    "Powerful build with forest-green tinged skin, wild hair that seems to contain actual leaves and twigs, and a nose large and sensitive as a woodland creature's.",
+    "Large and imposing with grayish-blue skin, bushy eyebrows and a beard like tangled vines, and gentle eyes the color of a summer sky.",
+    "Tall with skin the color of tree bark, mossy hair that actually sprouts small mushrooms, and eyes like amber pools flecked with gold.",
+    "Bulky but graceful, with pale blue-green skin, hair like flowing willow branches, and a calm voice that sounds like wind through leaves.",
+    "Stout with skin mottled in patterns resembling sunlight through a forest canopy, a thick beard adorned with acorns, and eyes like deep forest pools.",
+    "Broad-shouldered with lavender-grey skin, hair as white as moonlight, and a deep connection to nature apparent in their plant-like scent.",
+    "Lumbering yet precise in movement, with bark-like textured skin, hair threaded with living vines, and eyes that shift color with the seasons.",
+    "Imposing with skin the muted blue of twilight, a wild tangle of hair containing small nesting birds, and a gentle voice barely above a whisper."
+  ],
+  
+  'Genasi': [
+    "Air Genasi with cloud-white skin that seems to ripple like mist, hair that floats as if underwater, and eyes the color of a clear sky.",
+    "Earth Genasi with skin like polished amber stone, crystalline growths protruding from shoulders and forearms, and eyes the deep brown of rich soil.",
+    "Fire Genasi with ash-gray skin, hair that writhes and flickers like flames, and eyes that glow like hot coals in even the brightest light.",
+    "Water Genasi with blue-tinted skin, hair that appears perpetually wet, and eyes the deep green-blue of ocean depths.",
+    "Air Genasi with nearly translucent skin, hair that constantly moves as if in a gentle breeze, and breath that comes out visible like on a cold day regardless of temperature.",
+    "Earth Genasi with skin embedded with small gemstone fragments, a solid, immovable stance, and eyes like polished marble with no discernible pupil.",
+    "Fire Genasi with skin that radiates warmth, veins that occasionally glow orange as if filled with magma, and smoky breath that curls visibly from their nostrils.",
+    "Water Genasi with scales scattered across their skin like a fish, webbed fingers and toes, and a voice that sounds as if speaking through water.",
+    "Air Genasi with silver-white skin, hair that occasionally dissolves into mist at the edges, and light enough footsteps that they seem barely to touch the ground.",
+    "Fire Genasi with dark red skin, eyes that flare brightly when emotional, and hair that smolders at the tips when they're angry or excited."
+  ],
+  
+  'Gith': [
+    "Githyanki with gaunt, angular features, skin the yellow-green of old parchment, and eyes filled with the burning intensity of conquest.",
+    "Githzerai with lean, wiry muscles, golden-hued skin, and eyes that seem focused on another plane of existence entirely.",
+    "Githyanki warrior with jagged features, skin like tarnished bronze, elaborate cranial ridges, and an imperious, battle-ready stance.",
+    "Githzerai monk with skin the color of faded brass, a perfectly controlled economy of movement, and eyes that perceive multiple realities at once.",
+    "Tall and gaunt Githyanki with sallow yellow skin, sharp predatory features, and red-tinged eyes that glint with cruel intelligence.",
+    "Lean and disciplined Githzerai with copper-toned skin, a completely hairless head marked with psionic tattoos, and a tranquil stillness that masks incredible reflexes.",
+    "Intimidating Githyanki with skin like dried leather, elaborate silver-adorned armor fused to their body, and a fierce grin that displays too-sharp teeth.",
+    "Serene Githzerai with amber skin, a head adorned with small crystalline growths, and eyes that seem to look through people rather than at them.",
+    "Imposing Githyanki with elongated limbs, yellow-green skin stretched tight over prominent bones, and eyes that burn with the hatred of ancient vendettas.",
+    "Centered Githzerai with golden-brown skin, intricate geometric scarification across their scalp, and a presence so controlled they seem more statue than living being."
+  ],
+   'Half-Elf': [
+    "Graceful with slightly pointed ears, almond-shaped eyes of brilliant green, and a face that blends elven beauty with human expressiveness.",
+    "Tall and athletic with subtle pointed ear tips, hair that catches the light like spun gold, and eyes that hint at elven heritage.",
+    "Lithe with delicate features, ears more pointed than human but less so than elven, and eyes of such a deep blue they seem almost purple in certain light.",
+    "Striking with subtle elven influences in their high cheekbones and almond eyes, while their sturdy build speaks of human ancestry.",
+    "Charismatic with a perfect blend of human and elven features, shoulder-length auburn hair, and eyes that shift color depending on their mood.",
+    "Poised with the elegant facial features of an elf but the emotional expressiveness of a human, with ears just pointed enough to draw attention.",
+    "Athletic with a lean build, hair like spun silver, and eyes with the distinctive elven shape but a human warmth and expressiveness.",
+    "Handsome with features that combine elven grace with human versatility, subtly pointed ears, and eyes the color of amber that seem to catch the light.",
+    "Captivating with features that seem to shift between human and elven depending on expression and lighting, with hair that holds an unnatural luster.",
+    "Dignified with the height of a human but the slender build of an elf, elegantly pointed ears, and eyes that hold the wisdom of two worlds."
+  ],
+  
+  'Half-Orc': [
+    "Imposing with jutting lower tusks, skin the color of forest moss, and eyes that reveal surprising intelligence and sensitivity.",
+    "Towering with gray-green skin, small tusks that protrude from their lower lip, and muscles that ripple beneath their weathered hide.",
+    "Powerful with muted green skin, prominent brow, and a disciplined posture that suggests their orcish strength is carefully controlled.",
+    "Intimidating with jade-green skin, tusks filed to sharp points, and scars from countless battles adorning their muscular frame.",
+    "Strong-featured with olive-tinted skin, subtle tusks, and eyes that shift between human compassion and orcish intensity.",
+    "Hulking with dusty green skin, tusks that jut from their lower jaw, and hands large enough to wield massive weapons with ease.",
+    "Rugged with skin like weathered leather with a greenish tinge, small but visible tusks, and a build that combines human dexterity with orcish power.",
+    "Formidable with grey-green skin, pronounced tusks, and eyes that burn with determination beneath a heavy brow.",
+    "Athletic with skin just green enough to reveal their heritage, barely noticeable tusks, and a confidence in movement that combines human grace with orcish power.",
+    "Stout with deep green skin, small tusks, and muscles honed by years of proving themselves in two worlds that often reject them."
+  ],
+  
+  'Hobgoblin': [
+    "Disciplined with orange-red skin, piercing yellow eyes, and a militant bearing that commands respect from allies and enemies alike.",
+    "Martial with russet skin, small tusks, and posture as rigid and controlled as the military formations they excel in.",
+    "Commanding with brick-red skin, fierce yellow eyes, and scars earned in battle worn as proudly as the medals on their immaculate uniform.",
+    "Orderly with dark orange skin, amber eyes, and armor maintained to perfection, reflecting their society's emphasis on military discipline.",
+    "Strategic with ruddy orange skin, calculating golden eyes, and a precisely trimmed beard that speaks to their methodical nature.",
+    "Imposing with red-orange skin, predatory yellow eyes, and military insignia tattooed on their arms to denote rank and achievements.",
+    "Regimented with burnt-orange skin, fierce golden eyes, and a rigid posture that never relaxes, even in supposed safety.",
+    "Dignified with dark red skin, gleaming yellow eyes, and ornate but functional armor that displays their status in hobgoblin society.",
+    "Precise with reddish-orange skin, amber eyes that miss nothing, and a collection of honorable battle scars that tell stories of military conquests.",
+    "Formidable with dusky red skin, penetrating yellow eyes, and hair tied in a tight warrior's knot—ready for battle at a moment's notice."
+  ],
+  
+  'Kenku': [
+    "Avian with sleek black feathers covering their body, bright eyes that gleam with intelligence, and a beak that somehow manages to smirk.",
+    "Raven-like with glossy dark feathers, clever eyes always darting about in search of shiny objects, and wings adapted into dexterous hands.",
+    "Crow-featured with iridescent black plumage, sharp eyes that miss nothing, and a beak perfect for mimicking sounds with astonishing precision.",
+    "Bird-like with midnight-black feathers occasionally tipped with blue, expressive eyes, and a stance that seems perpetually ready to flee.",
+    "Corvid with dark feathers, a hunched posture, and eyes that seem to evaluate everything for its potential value or usefulness.",
+    "Feathered humanoid with dark plumage ranging from charcoal to deep blue-black, bright intelligent eyes, and a talent for mimicry that extends to body language.",
+    "Avian with matte-black feathers, eyes like polished onyx, and dexterous talons equally suited for theft or craftsmanship.",
+    "Raven-headed with sleek feathers that shimmer purple and green in direct light, quick suspicious movements, and a collection of small trinkets woven into their plumage.",
+    "Crow-like with dusty black feathers, observant eyes, and a hunched gait that belies their surprising speed when necessary.",
+    "Bird-featured with dark plumage streaked with gray, intelligent eyes constantly assessing escape routes, and pouches filled with collected oddities."
+  ],
+  
+  'Kobold': [
+    "Small and draconic with scales the color of burnished copper, a horned ridge along their spine, and bright, cunning eyes.",
+    "Diminutive reptilian with rust-red scales, a snout full of needle-sharp teeth, and a wiry tail that never stops moving.",
+    "Tiny dragon-kin with scales of deep blue, wide amber eyes that seem too large for their small face, and ingenuity shining in their quick movements.",
+    "Small and scaly with green-tinted hide, dexterous clawed hands built for tinkering, and quick, darting eyes that miss nothing.",
+    "Unimposing with brass-colored scales, a pronounced snout, and the constant energy of a creature that compensates for size with speed.",
+    "Slight but energetic with white scales tinged with blue, spines that rise when excited, and clever hands always working on some device.",
+    "Reptilian with scales the orange-red of glowing coals, a perpetual crouch that makes them seem even smaller, and a surprisingly charming smile full of sharp teeth.",
+    "Dragon-blooded with brilliant crimson scales, small horns protruding from their head, and bright yellow eyes with vertical pupils.",
+    "Wiry with bronze scales that catch the light, a long snout filled with tiny pointed teeth, and expressive ears that twitch with every emotion.",
+    "Quick and clever with scales the color of tarnished silver, alert eyes, and a constantly twitching snout that catches every scent."
+  ],
+  
+  'Leonin': [
+    "Majestic with a full golden mane framing their feline face, powerful muscles rippling beneath tawny fur, and eyes the yellow-green of a savanna predator.",
+    "Regal with a mane of dark golden hair surrounding their lion-like features, powerful clawed hands, and amber eyes that reveal fierce pride.",
+    "Powerful with a thick, shaggy mane, fur the color of sun-baked sand, and piercing golden eyes that command respect.",
+    "Imposing with a luxurious black mane, tan fur covering their muscular body, and eyes that glow with inner strength and resolve.",
+    "Noble with a copper-colored mane flowing down their back, fur ranging from tan to deep gold, and calculating eyes that survey their domain.",
+    "Fierce with a russet mane, powerful feline features, and eyes that hold both the wisdom of a leader and the keen instinct of a hunter.",
+    "Commanding with a rich golden mane, battle-scarred lion-like visage, and eyes the amber color of a sunset over the savanna.",
+    "Intimidating with a silver-streaked dark mane, powerful build covered in tawny fur, and sharp claws that can be both lethal weapons and precise tools.",
+    "Dignified with a golden-brown mane adorned with clan beads, sun-darkened fur, and eyes that hold generations of pride and tradition.",
+    "Mighty with a mane the color of burnished bronze, powerful muscles visible beneath well-groomed fur, and the confident gaze of an apex predator."
+  ],
+  
+  'Locathah': [
+    "Amphibious with scales in patterns of blue and green, large round eyes that rarely blink, and webbed hands and feet perfect for swimming.",
+    "Fish-like with iridescent silver scales, bulbous eyes set on the sides of their head, and gills that flutter gently even in open air.",
+    "Aquatic with scales ranging from deep blue to turquoise, a dorsal fin running down their back, and eyes that seem to hold the depths of the ocean.",
+    "Piscine with brightly colored scales in patterns of orange and white, fins along their forearms and spine, and large, expressive fish-like eyes.",
+    "Sleek with scales the color of tropical waters, a face that blends humanoid and fish-like features, and fingers webbed for powerful swimming.",
+    "Streamlined with scales in a pattern of blue and yellow stripes, a slightly protruding mouth that hints at their aquatic nature, and eyes adapted for seeing in murky waters.",
+    "Fish-featured with scales the color of deep ocean trenches, small fins jutting from their forearms, and wide unblinking eyes that seem perpetually surprised.",
+    "Aquatic humanoid with scales in mottled patterns of green and blue, a somewhat flattened face, and a graceful swimming motion even when walking on land.",
+    "Finned with scales the color of coral reefs, prominent gills along their neck, and a powerful tail-like appendage that aids in swimming.",
+    "Water-dwelling with rainbow-hued scales that shimmer in the light, a flexible spine perfect for quick directional changes underwater, and gills that flutter nervously when they're far from water."
+  ],
+  
+  'Loxodon': [
+    "Imposing with gray, leathery skin, a trunk that moves with surprising dexterity, and small tusks jutting from their elephant-like face.",
+    "Massive with thick hide the color of slate, expressive ears that flare when emotional, and wise eyes that seem to take in everything.",
+    "Towering with skin like weathered stone, a powerful trunk capable of both delicate manipulation and devastating strikes, and a philosophical calm in their stance.",
+    "Mighty with gray wrinkled skin, tusks polished and cared for meticulously, and a deliberate way of moving that suggests immense restraint.",
+    "Enormous with skin the color of light sandstone, ornate carvings adorning their tusks, and eyes that hold centuries of wisdom and patience.",
+    "Statuesque with thick hide the color of granite, large hanging ears adorned with metallic piercings, and a trunk decorated with painted symbols of their guild.",
+    "Substantial with gray, wrinkled skin, modest tusks marked with family history, and movements as methodical and unstoppable as the flow of time.",
+    "Powerful with skin like pale leather, a nimble trunk that serves as an extra hand, and eyes that observe with thoughtful intelligence.",
+    "Elephantine with skin the color of polished marble, tusks inlaid with bronze designs, and a measured gait that speaks to their disciplined nature.",
+    "Monumental with leathery gray skin, a trunk capable of the most delicate calligraphy, and ears that communicate emotion as clearly as facial expressions."
+  ],
+  
+  'Minotaur (Ravnica)': [
+    "Imposing with deep reddish-brown fur, massive curved horns adorned with metal rings, and the disciplined stance of a guild warrior.",
+    "Powerful with dark brown fur, bull-like features, and horns that have been sharpened and capped with gleaming bronze.",
+    "Massive with black fur, impressive curved horns etched with guild symbols, and muscles hardened through rigorous combat training.",
+    "Fearsome with russet fur, broad shoulders bearing the weight of heavy armor, and horns polished to a shine that reflects their pride in guild service.",
+    "Intimidating with dark brown fur accented with white patches, horns carved with accomplishments, and a militant bearing that commands respect.",
+    "Towering with reddish fur, curved horns adorned with precious metals, and the confident posture of one who has earned their place through combat.",
+    "Sturdy with chocolate-brown fur, prominent forward-facing horns wrapped in leather for combat, and eyes that assess tactical advantages in every situation.",
+    "Muscular with black fur streaked with gray, formidable horns adorned with guild insignias, and a disciplined stance ready for battle.",
+    "Powerful with deep auburn fur, curved horns that sweep back from their bovine head, and armor bearing the marks of countless honorable battles.",
+    "Martial with dark brown fur, imposing horns capped with steel, and a precise, measured way of moving that speaks to rigorous training."
+  ],
+  
+  'Minotaur (Theros)': [
+    "Mythic with tawny fur, massive spiraling horns, and muscles that ripple beneath a warrior's physique honed in the labyrinth.",
+    "Legendary with dark brown fur, impressive curved horns wrapped in golden wire, and eyes that hold the mysteries of the labyrinth.",
+    "Powerful with russet fur, bull-like features tempered with intelligence, and horns adorned with symbols of heroic deeds.",
+    "Imposing with black fur, widespread curving horns perfect for charging opponents, and the confident bearing of one blessed by the gods.",
+    "Majestic with brown fur accented with white patches, horns carved with stories of their accomplishments, and the grace of one who has mastered the labyrinth's challenges.",
+    "Fierce with reddish-brown fur, huge curved horns adorned with bronze medallions, and muscles toned by countless battles and trials.",
+    "Heroic with dark chestnut fur, impressive forward-sweeping horns, and the honorable stance of a warrior who follows the ancient traditions.",
+    "Mythological with black fur, massive twisting horns wrapped in gleaming wire, and eyes that seem to see beyond mortal limitations.",
+    "Formidable with brown-red fur, perfectly symmetrical horns adorned with divine symbols, and the measured movements of a warrior aware of their strength.",
+    "Legendary with dark fur highlighted with bronze accents, wide curving horns that inspire awe, and a proud bearing that speaks of divine favor."
+  ],
+  
+  'Satyr': [
+    "Playful with curly hair and beard, goat-like legs covered in russet fur, and small horns that curl from their forehead.",
+    "Mischievous with wild hair woven with flowers, goat legs with brown fur, and short curved horns adorned with vines.",
+    "Energetic with tousled hair, powerful goat-like legs covered in reddish fur, and eyes that sparkle with barely contained revelry.",
+    "Exuberant with curly black hair and beard, sturdy goat legs with dark brown fur, and small horns sprouting from their temples.",
+    "Vibrant with hair tied back with colorful ribbons, furred legs the color of autumn leaves, and horns adorned with tiny bells that chime when they move.",
+    "Spirited with curly brown hair, goat legs with tan fur, and curved horns wrapped with brightly colored string and beads.",
+    "Carefree with flowing hair adorned with freshly picked wildflowers, sturdy goat legs covered in russet fur, and polished horns that curve elegantly upward.",
+    "Jovial with a wild mane of hair, powerful goat legs with chocolate-brown fur, and horns that sweep back dramatically from their forehead.",
+    "Lively with hair intentionally styled into disarray, furred legs in mottled patterns of brown and white, and short horns adorned with small crystals that catch the light.",
+    "Festive with curly hair interwoven with vine leaves, muscular goat legs with golden-brown fur, and horns wrapped in thin strands of precious metals."
+  ],
+  
+  'Shifter': [
+    "Wild with subtle bestial features—slightly elongated canines, coarse hair, and eyes that catch the light like an animal's when shifted.",
+    "Feral looking with pronounced eyebrows, hair that grows thick and mane-like, and fingernails that thicken into claws when their beast emerges.",
+    "Primal with a lean, predatory build, slightly pointed ears, and eyes that change color completely when they shift toward their bestial nature.",
+    "Untamed with thick, wild hair, teeth slightly too sharp to be fully human, and a subtle, constant alertness like prey watching for predators.",
+    "Beast-touched with unusual eye colors that seem to glow when emotional, a graceful yet animalistic gait, and skin that subtly changes texture when they shift.",
+    "Predatory with sharp features, hair that rises like hackles when threatened, and hands that transform partially to paws during moments of stress.",
+    "Animalistic with keen senses evident in their constantly moving eyes and twitching nose, coarse body hair, and a defensive stance when cornered.",
+    "Wild-hearted with sharp canines that descend further when shifted, unusually colored eyes with vertical pupils, and nails that harden into natural weapons.",
+    "Feral-adjacent with features that subtly shift toward animal-like when emotional, hair that seems to move of its own accord, and a heightened awareness of their surroundings.",
+    "Beast-kin with subtle animal traits even when not shifted—slightly pointed ears, unusual eye coloration, and an instinctive reaction to threats that bypasses conscious thought."
+  ],
+  
+  'Simic Hybrid': [
+    "Adapted with translucent blue-green skin revealing modified organs beneath, webbed fingers, and gills that open along their neck when underwater.",
+    "Modified with skin that shifts between human and fish-like scales, eyes that can adjust to see perfectly in water, and vestigial fins along their forearms.",
+    "Evolved with patches of crab-like carapace providing natural armor, eyes on short stalks that can move independently, and extra joints in their fingers for increased dexterity.",
+    "Transformed with jellyfish-like translucent membranes connecting their fingers, bioluminescent patterns that glow beneath their skin, and the ability to change color like an octopus.",
+    "Enhanced with frog-like adhesive pads on fingers and toes, powerful leg muscles adapted for jumping, and eyes that can see into the ultraviolet spectrum.",
+    "Augmented with subtle reptilian scales across their back and limbs, retractable claws, and eyes with nictitating membranes for underwater vision.",
+    "Optimized with flexible spine allowing snake-like movement, minuscule feeler tentacles around the hairline that sense air currents, and slightly webbed digits.",
+    "Improved with skin that can harden into shell-like plates when threatened, elongated arms with extra joints, and gills hidden behind their ears.",
+    "Perfected with octopus-like chromatophores allowing skin color changes, subtle tentacle-like appendages that can emerge from their back, and enhanced night vision.",
+    "Advanced with seamlessly integrated crab-like pincers that can emerge from their forearms, patches of iridescent scales, and eyes adapted for perfect underwater vision."
+  ],
+  
+  'Svirfneblin (Deep Gnome)': [
+    "Small with stone-gray skin, large eyes adapted for darkness, and a completely hairless head covered in small crystalline growths.",
+    "Stout with skin the color of deep cavern walls, eyes that reflect light like a nocturnal animal's, and quick, darting movements like a subterranean creature.",
+    "Diminutive with skin like polished granite, large expressive ears, and dark eyes that can see perfectly in the lightless depths.",
+    "Compact with skin the color of slate, a nose that twitches constantly taking in scents, and nimble fingers perfect for gem-cutting.",
+    "Small-statured with rock-colored skin, nearly hairless with a few wiry white strands, and eyes that seem to hold the darkness of the Underdark itself.",
+    "Hardy with skin the gray-brown of cave walls, large ears that can detect the slightest sound, and a perpetually hunched posture from a lifetime in low tunnels.",
+    "Wiry with skin the color of iron ore, clever hands covered in scars from mining and gem-cutting, and alert eyes that never stop scanning for danger.",
+    "Tough with stone-colored skin, a hairless head with natural whorls and patterns like rock formations, and the quick, twitchy movements of one constantly evading predators.",
+    "Resilient with skin the dark gray of deep caverns, white hair so fine it's almost invisible, and surprisingly strong hands for their small size.",
+    "Sturdy with skin the color of unpolished granite, eyes adapted for complete darkness, and reflexes honed by generations of surviving the Underdark's dangers."
+  ],
+  
+  'Tiefling': [
+    "Devilish with crimson skin, small horns curling from their forehead, and eyes that glow faintly in the darkness.",
+    "Infernal with deep purple skin, ram-like horns curving along the sides of their head, and a long, thin tail that moves of its own accord.",
+    "Fiendish with reddish-brown skin, sharp cheekbones, horns that sweep back from their temples, and solid black eyes with no visible pupils.",
+    "Otherworldly with lavender skin, elegant curved horns adorned with silver jewelry, and eyes the color of burnished gold with vertical pupils.",
+    "Supernatural with blue-black skin, short straight horns protruding from their forehead, and a pointed tail that betrays their emotional state.",
+    "Beguiling with deep red skin, delicate horns that wind like a crown around their head, and eyes that smoke faintly when they're angry.",
+    "Mystical with wine-colored skin, impressive spiral horns, and a charming smile that reveals slightly pointed canines.",
+    "Enchanting with skin the color of bruised plums, elegant horns curling from their temples, and a tail ending in a spade-shaped tip.",
+    "Arcane with ashen gray skin, short curved horns, and eyes like pools of liquid silver that reflect light unnaturally.",
+    "Bewitching with crimson skin, small horns partially hidden by luxurious hair, and the faint scent of brimstone that follows them like perfume."
+  ],
+  
+  'Tortle': [
+    "Protected by a dome-shaped shell with intricate natural patterns, leathery green skin, and a wise, weathered face with a prominent beak.",
+    "Armored with a high-domed brown shell adorned with tribal carvings, strong limbs covered in scaled skin, and thoughtful eyes set in a reptilian face.",
+    "Shielded by a mottled green and brown shell worn smooth by years, powerful clawed hands, and a face that combines reptilian features with expressive eyes.",
+    "Fortified with a dark green shell etched with the story of their travels, skin the texture of well-worn leather, and a deliberate, unhurried way of speaking and moving.",
+    "Encased in a sand-colored shell decorated with painted symbols of their clan, scaly skin weathered by sun and salt, and a calm demeanor that comes from long lifespan.",
+    "Protected by a large olive-green shell with natural ridges, powerful limbs that move with surprising grace, and ancient eyes that have seen countless tides come and go.",
+    "Armored with a richly colored shell in patterns of brown and amber, tough, scaled skin on their exposed limbs and head, and a methodical approach to all tasks.",
+    "Shielded by a weathered shell marked with faded tribal symbols, skin like tanned leather, and a contemplative manner formed by decades of walking the world.",
+    "Fortified with a high-domed shell in mottled patterns of green and blue, skin adapted for both land and sea, and a serene wisdom born from acceptance of life's slow pace.",
+    "Encased in a natural armor of brown and gold patterns, a beak-like mouth usually curved in a slight smile, and the patient demeanor of one who measures time in decades rather than days."
+  ],
+  
+  'Triton': [
+    "Aquatic with blue-tinted skin, webbed hands and feet, and hair that moves as if underwater even on land.",
+    "Oceanic with skin in shades of turquoise, small fins along their forearms, and eyes the deep blue-green of tropical waters.",
+    "Sea-born with skin the pale blue of shallow lagoons, hair that seems permanently wet, and fingers webbed for powerful swimming.",
+    "Water-dwelling with skin that shifts between blue and green depending on the light, small gills behind their ears, and a commanding presence like a tide.",
+    "Marine with skin the color of deep ocean trenches, small scales scattered across their shoulders and spine, and hair that floats upward as if in water.",
+    "Pelagic with skin patterned in blues and greens like sunlight through water, small decorative fins along their spine, and eyes adapted for seeing in oceanic depths.",
+    "Aquatic with opalescent skin that shimmers with blue and green highlights, webbed digits perfect for swimming, and a voice that carries like over still waters.",
+    "Oceanic with skin the cool blue of deep waters, vestigial fins behind their ears, and mysterious eyes that hold secrets from the ocean floor.",
+    "Sea-blessed with skin adorned with luminescent patterns that glow faintly in darkness, webbed hands and feet, and hair that never fully dries.",
+    "Water-aligned with skin that seems to reflect the current color of the nearest body of water, small scales along their hairline, and a fluid grace to all their movements."
+  ],
+  
+  'Vampire (Legacy)': [
+    "Aristocratic with unnaturally pale skin, elongated canines visible when they smile, and eyes that glow red when hungry or angry.",
+    "Predatory with alabaster skin that hasn't seen sunlight in centuries, perfect features frozen in time, and a graceful fluidity to their movements.",
+    "Immortal with marble-white skin, dark hair with unnatural luster, and eyes that hold centuries of secrets and hunger.",
+    "Undead with skin as pale as moonlight, an ageless beauty, and fingernails that extend into claws when their bloodlust rises.",
+    "Eternal with skin like polished ivory, a mesmerizing gaze that can enthrall the unwary, and an aristocratic bearing from a long-forgotten age.",
+    "Nocturnal with paper-white skin, an elegant but archaic style of dress, and a predatory grace that hints at supernatural capabilities.",
+    "Blood-dependent with skin unnaturally smooth and pale, eyes that reflect light like a predator's, and an aura of cold that seems to permeate their surroundings.",
+    "Immortal with features frozen in unnatural youth, skin that hasn't felt sunlight in ages, and movements too quick and precise to be fully human.",
+    "Cursed with the pallor of death yet the vitality of stolen life, sharp elongated canines visible when they speak, and eyes that sometimes reveal their true predatory nature.",
+    "Ancient with skin like fine porcelain, unnaturally red lips, and a voice that can command attention with supernatural force."
+  ],
+  
+  'Vedalken': [
+    "Analytical with blue skin, hairless head, and long limbs perfect for detailed work with small components.",
+    "Intellectual with skin ranging from pale blue to indigo, an extra joint in each finger for precise manipulation, and calculating eyes that miss nothing.",
+    "Scientific with deep azure skin, prominent brow ridges, and a tall, slender build suited for standing for hours at workbenches.",
+    "Methodical with sky-blue skin, a slightly elongated skull, and an additional digit on each hand for extra dexterity with tools and components.",
+    "Inquisitive with cerulean skin, no visible ears—only small auditory canals, and fingers so dexterous they seem to move independently of each other.",
+    "Rational with blue-gray skin, no body hair, and large eyes adapted for focusing on minute details for extended periods.",
+    "Studious with cobalt-blue skin, long nimble fingers, and an attention to detail evident in everything from their precisely arranged tools to their immaculate appearance.",
+    "Investigative with pale blue skin, an unusually long neck, and eyes that seem to dissect and analyze everything they observe.",
+    "Perfectionist with smooth blue skin, carefully maintained hands with nails trimmed for optimal tool use, and a constant analytical gleam in their eyes.",
+    "Innovative with sapphire-blue skin, a calm, unflappable demeanor, and fingers in constant subtle motion as they mentally design and troubleshoot."
+  ],
+  
+  'Warforged': [
+    "Constructed with a frame of dark metal and wood, glowing runes etched across vital components, and eyes that shine with magical sentience.",
+    "Mechanical with plates of burnished steel covering a wooden core, tubes of glowing magical energy visible at the joints, and a face designed to approximate humanoid expressions.",
+    "Forged with heavy plates of metal crafted into a humanoid form, magical crystals embedded at key points, and constant soft whirring sounds accompanying movement.",
+    "Assembled from metals, stone, and wood, with a face bearing minimal features except for eyes that glow with created consciousness.",
+    "Crafted with interlocking plates of darkwood and mithral, tubes of arcane fluid running through visible channels, and a voice that resonates with mechanical precision.",
+    "Engineered with a skeletal frame of metal overlaid with protective plates, magical gems serving as sensory organs, and a face that can shift slightly to convey basic emotions.",
+    "Manufactured with a perfect blend of wood, metal, and stone, runes glowing with arcane energy carved across their chest, and movements that combine mechanical precision with surprising grace.",
+    "Built with overlapping plates of metal forming a humanoid shell, glowing blue energy visible through gaps in the armor, and a head designed with minimal but distinctive features.",
+    "Designed with a framework of enchanted metal supporting carefully carved wooden components, gemstones serving as eyes that shift color with changing emotions, and a voice that emanates from a specially designed resonance chamber.",
+    "Constructed as a perfect marriage of magic and metallurgy, with a face carved to suggest rather than mimic human features, and a constant low hum of arcane energy powering their movements."
+  ],
+  
+  'Yuan-Ti Pureblood': [
+    "Serpentine with mostly human features but scales scattered across their skin, slitted pupils, and a forked tongue that occasionally flickers between their lips.",
+    "Ophidian with the appearance of a beautiful human except for patches of iridescent scales along their spine, serpentine eyes, and unusually flexible joints.",
+    "Snake-blooded with human form but reptilian eyes, scattered scales that shimmer in the light, and a calm, calculating demeanor.",
+    "Reptilian with features that appear human at first glance, but careful observation reveals scales along the hairline, unnaturally flexible movements, and eyes that never blink.",
+    "Serpent-kin with subtle scales along their forearms and back, eyes with vertical pupils, and movements that possess an unnatural, hypnotic fluidity.",
+    "Cold-blooded appearing mostly human but with small patches of scales usually hidden by clothing, a tendency to move with uncanny stillness, and eyes that reflect light like a snake's.",
+    "Snake-hybrid with a flawless human appearance marred only by small clusters of scales at the temples and wrists, a tendency to sway slightly when standing still, and a voice with subtle, sibilant undertones.",
+    "Serpentine with subtly mottled skin that reveals its true scaled nature only in certain lights, a habit of remaining perfectly still for long periods, and a gaze that can hold others in place through sheer intensity.",
+    "Ophidian with a beautiful human face that occasionally shows subtle reptilian characteristics when they're not consciously hiding them, unusually flexible limbs, and the faint scent of exotic spices.",
+    "Snake-descended with a perfect human disguise betrayed only by occasional flickers of a forked tongue, an unnatural smoothness to their movements, and eyes that never show genuine emotion."
+  }
+};
 };
