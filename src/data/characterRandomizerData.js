@@ -11,5 +11,10 @@ export {
   nameSuffixes, 
   lastNamePrefixes, 
   lastNameSuffixes, 
-  getRaceNameComponents 
+  getRaceNameComponents,
+  // Add the new name component exports
+  additionalNamePrefixes,
+  additionalNameSuffixes,
+  additionalLastNamePrefixes,
+  additionalLastNameSuffixes
 } from './characterRandomizer/nameComponents';
