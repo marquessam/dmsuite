@@ -1,8 +1,9 @@
 // This file combines all character randomizer data into a single export
-export { races, raceDescriptions } from './characterRandomizer/races.js';
-export { classes, classDescriptions } from './characterRandomizer/classes.js';
-export { backgrounds } from './characterRandomizer/backgrounds.js';
-export { features } from './characterRandomizer/features.js';
-export { appearances } from './characterRandomizer/appearances.js';
-export { deities } from './characterRandomizer/deities.js';
-export { namePrefixes, nameSuffixes, lastNames } from './characterRandomizer/nameComponents.js';
+// Make sure to use the correct file extensions
+export { races, raceDescriptions } from './characterRandomizer/races';
+export { classes, classDescriptions } from './characterRandomizer/classes';
+export { backgrounds } from './characterRandomizer/backgrounds';
+export { features } from './characterRandomizer/features';
+export { appearances } from './characterRandomizer/appearances';
+export { deities } from './characterRandomizer/deities';
+export { namePrefixes, nameSuffixes, lastNames } from './characterRandomizer/nameComponents';
