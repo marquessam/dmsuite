@@ -185,7 +185,7 @@ export default function CharacterRandomizer() {
           </select>
         </div>
         
-        {/* Deity Selector */}
+{/* Deity Selector */}
         <div>
           <label className="block text-amber-200 text-sm font-medium mb-1">Deity</label>
           <select 
@@ -194,7 +194,7 @@ export default function CharacterRandomizer() {
             className="w-full bg-stone-800 border border-amber-900/50 rounded-lg p-2 text-amber-100"
           >
             <option value="">Random</option>
-            {character?.suitableDeities?.map(deity => (
+            {deities.map(deity => (
               <option key={deity.name} value={deity.name}>{deity.name}</option>
             ))}
           </select>
