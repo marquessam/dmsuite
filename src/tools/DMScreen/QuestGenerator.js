@@ -67,7 +67,7 @@ const questData = {
     { name: 'Competing Interest', desc: 'Others are trying to accomplish the same goal' },
     { name: 'False Information', desc: 'Critical details about the quest are wrong' },
     { name: 'Trap', desc: 'The entire quest is a setup to ensnare the party' },
-    { name: 'Public Scrutiny', desc: 'The party\'s actions are being closely watched' },
+    { name: 'Public Scrutiny', desc: 'The party's actions are being closely watched' },
     { name: 'Magical Interference', desc: 'Arcane forces disrupt normal operations' },
     { name: 'Divided Loyalties', desc: 'Party members have conflicting obligations' }
   ],
@@ -96,7 +96,7 @@ const questData = {
     { name: 'Noble Estate', desc: 'The home of a wealthy or influential family' },
     { name: 'Border Fortress', desc: 'A military structure defending a boundary' },
     { name: 'Cursed Village', desc: 'A settlement affected by dark magic' },
-    { name: 'Wizard\'s Tower', desc: 'The domain of a practitioner of the arcane' },
+    { name: 'Wizard's Tower', desc: 'The domain of a practitioner of the arcane' },
     { name: 'Desert Oasis', desc: 'A fertile area surrounded by arid wasteland' },
     { name: 'Coastal Town', desc: 'A settlement on the edge of the sea' },
     { name: 'Planar Gateway', desc: 'A point of connection between worlds' },
@@ -104,7 +104,7 @@ const questData = {
     { name: 'Monster Lair', desc: 'The home territory of dangerous creatures' },
     { name: 'Magical Academy', desc: 'A school for training spellcasters' },
     { name: 'Floating Island', desc: 'Land suspended in the air by magic or other means' },
-    { name: 'Thieves\' Guild', desc: 'The headquarters of a criminal organization' },
+    { name: 'Thieves' Guild', desc: 'The headquarters of a criminal organization' },
     { name: 'Battlefield', desc: 'A site of past or ongoing conflict' },
     { name: 'Trading Post', desc: 'A center for commerce in a frontier region' },
     { name: 'Sunken Ship', desc: 'A vessel that has gone down beneath the waves' }
@@ -146,7 +146,7 @@ const questData = {
 
 // NPC name generation
 const nameComponents = {
-  firstNamePrefixes: ["Ael", "Aer", "Af", "Ak", "Al", "Am", "An", "Ap", "Ar", "As", "At", "Av", "Ban", "Bar", "Bel", "Ben", "Ber", "Bok", "Bor", "Bran", "Breg", "Bren", "Brod", "Cam", "Car", "Chal", "Cham", "Ch", "Cuth", "Dag", "Dain", "Dal", "Dan", "Dar", "Dav", "De", "Deth", "Dor", "Duer", "Dun", "Ed", "Ein", "El", "En", "Er", "Es", "Fal", "Fen", "Fer", "Fhar", "Frath", "Gal", "Gan", "Gar", "Gath", "Gil", "Gor", "Gray", "Hal", "Han", "Har", "Hath", "Hen", "Hil", "Hor", "Hul", "In", "Ir", "Is", "Jal", "Jar", "Jor", "Kan", "Kar", "Kel", "Khal", "Kor", "Kra", "Kul", "Lam", "Lan", "Lev", "Lin", "Lor", "Mar", "Mas", "Me", "Mor", "Muel", "Mul", "Mur", "Nal", "Nar", "Nev", "Nil", "Nor", "Nyr", "Ol", "On", "Or", "Oth", "Pae", "Per", "Pet", "Qar", "Qil", "Qin", "Qor", "Quan", "Quil", "Rag", "Ran", "Rath", "Ré", "Ren", "Rhud", "Riv", "Ron", "Sal", "Sam", "San", "Ser", "Sha", "Sil", "Sim", "Sol", "Sor", "Sum", "Syr", "Tar", "Tel", "Teth", "Thal", "Ther", "Thul", "Thur", "Til", "Tor", "Tras", "Trin", "Tul", "Tur", "Ul", "Um", "Un", "Ur", "Val", "Van", "Var", "Ved", "Ven", "Vil", "Von", "Vor", "War", "Wil", "Wor", "Xan", "Xen", "Xil", "Xor", "Yal", "Yan", "Yer", "Yor", "Yul", "Zen", "Zin", "Zor", "Zul"],
+  firstNamePrefixes: ["Ael", "Aer", "Af", "Ak", "Al", "Am", "An", "Ap", "Ar", "As", "At", "Av", "Ban", "Bar", "Bel", "Ben", "Ber", "Bok", "Bor", "Bran", "Breg", "Bren", "Brod", "Cam", "Car", "Chal", "Cham", "Ch", "Cuth", "Dag", "Dain", "Dal", "Dan", "Dar", "Dav", "De", "Deth", "Dor", "Duer", "Dun", "Ed", "Ein", "El", "En", "Er", "Es", "Fal", "Fen", "Fer", "Fhar", "Frath", "Gal", "Gan", "Gar", "Gath", "Gil", "Gor", "Gray", "Hal", "Han", "Har", "Hath", "Hen", "Hil", "Hor", "Hul", "In", "Ir", "Is", "Jal", "Jar", "Jor", "Kan", "Kar", "Kel", "Khal", "Kor", "Kra", "Kul", "Lam", "Lan", "Lev", "Lin", "Lor", "Mar", "Mas", "Me", "Mor", "Muel", "Mul", "Mur", "Nal", "Nar", "Nev", "Nil", "Nor", "Nyr", "Ol", "On", "Or", "Oth", "Pae", "Per", "Pet", "Qar", "Qil", "Qin", "Qor", "Quan", "Quil", "Rag", "Ran", "Rath", "Re", "Ren", "Rhud", "Riv", "Ron", "Sal", "Sam", "San", "Ser", "Sha", "Sil", "Sim", "Sol", "Sor", "Sum", "Syr", "Tar", "Tel", "Teth", "Thal", "Ther", "Thul", "Thur", "Til", "Tor", "Tras", "Trin", "Tul", "Tur", "Ul", "Um", "Un", "Ur", "Val", "Van", "Var", "Ved", "Ven", "Vil", "Von", "Vor", "War", "Wil", "Wor", "Xan", "Xen", "Xil", "Xor", "Yal", "Yan", "Yer", "Yor", "Yul", "Zen", "Zin", "Zor", "Zul"],
   
   firstNameSuffixes: ["a", "ac", "ace", "ach", "ad", "ade", "ae", "af", "ag", "ah", "ai", "ak", "ake", "al", "ale", "am", "an", "ane", "ar", "arc", "ard", "as", "ash", "at", "ath", "ayne", "az", "e", "ea", "ec", "ech", "ed", "ee", "ef", "eh", "ei", "ek", "el", "ele", "en", "ene", "ent", "er", "es", "esh", "ett", "ez", "i", "ia", "ic", "ich", "id", "ie", "ig", "ih", "ik", "il", "im", "in", "ine", "ing", "ioe", "ir", "is", "ish", "it", "ith", "ive", "iz", "o", "oa", "oe", "oi", "ok", "ol", "om", "on", "oo", "op", "or", "os", "osh", "ot", "oth", "ow", "oz", "u", "ue", "uh", "uk", "ul", "um", "un", "ur", "us", "uth", "uz"],
   
