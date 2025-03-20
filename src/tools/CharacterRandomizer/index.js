@@ -143,13 +143,6 @@ export default function CharacterRandomizer() {
     }
   }, [selectedRace, selectedClass, selectedDeity]);
   
-  // Update character when selections change
-  useEffect(() => {
-    if (character) {
-      generateCharacter();
-    }
-  }, [selectedRace, selectedClass, selectedDeity, generateCharacter]);
-  
   return (
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl md:max-w-2xl">
       {/* Selection Controls */}
