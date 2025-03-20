@@ -43,7 +43,21 @@ export const namePrefixes = {
   'Pixie': ['Bell', 'Blink', 'Dew', 'Flit', 'Glim', 'Nim', 'Peri', 'Pix', 'Shim', 'Spark', 'Tink', 'Twink', 'Bub', 'Dand', 'Flut', 'Glit', 'Nect', 'Puff'],
   
   // Treant prefixes - ancient, woody, deep
-  'Treant': ['Bur', 'Deep', 'Elder', 'Gnarl', 'Moss', 'Oak', 'Pine', 'Root', 'Twig', 'Wil', 'Wood', 'Yew', 'Bark', 'Elm', 'Green', 'Leaf', 'Old', 'Sap']
+  'Treant': ['Bur', 'Deep', 'Elder', 'Gnarl', 'Moss', 'Oak', 'Pine', 'Root', 'Twig', 'Wil', 'Wood', 'Yew', 'Bark', 'Elm', 'Green', 'Leaf', 'Old', 'Sap'],
+  
+  // NEW RACES
+  
+  // Avian prefixes - bird-like, airy sounds
+  'Avian (Birdfolk)': ['Aer', 'Beak', 'Caw', 'Down', 'Feath', 'Glid', 'Hawk', 'Kee', 'Nest', 'Plum', 'Quill', 'Rav', 'Soar', 'Tal', 'Wing', 'Zeph', 'Aer', 'Sky'],
+  
+  // Goblin prefixes - short, sharp sounds
+  'Goblin': ['Bix', 'Clink', 'Drex', 'Fik', 'Grix', 'Ikk', 'Jink', 'Krak', 'Lob', 'Mog', 'Nix', 'Pock', 'Queek', 'Rek', 'Sniv', 'Trink', 'Vex', 'Zix'],
+  
+  // Gnoll prefixes - yipping, laughing sounds
+  'Gnoll': ['Bruk', 'Cruk', 'Drag', 'Fang', 'Gnash', 'Howl', 'Kak', 'Mang', 'Narg', 'Pak', 'Rak', 'Snick', 'Thek', 'Yak', 'Yip', 'Zag', 'Gnar', 'Hyeg'],
+  
+  // Lizardfolk prefixes - hissing, reptilian sounds
+  'Lizardfolk': ['Cess', 'Dhass', 'Fiss', 'Garan', 'Hiss', 'Kaas', 'Liss', 'Mehen', 'Nath', 'Slis', 'Thass', 'Vess', 'Xak', 'Zhass', 'Arat', 'Bask', 'Irsh', 'Krex']
 };
 
 export const nameSuffixes = {
@@ -90,7 +104,21 @@ export const nameSuffixes = {
   'Pixie': ['beam', 'blink', 'drop', 'dust', 'flight', 'flutter', 'glow', 'light', 'petal', 'shine', 'sparkle', 'wing', 'chime', 'dance', 'flicker', 'glimmer', 'twinkle', 'wisp'],
   
   // Treant suffixes - ancient, nature
-  'Treant': ['bark', 'branch', 'leaf', 'moss', 'root', 'sap', 'seed', 'trunk', 'twig', 'wood', 'bloom', 'grove', 'heart', 'knot', 'ring', 'shade', 'thicket', 'year']
+  'Treant': ['bark', 'branch', 'leaf', 'moss', 'root', 'sap', 'seed', 'trunk', 'twig', 'wood', 'bloom', 'grove', 'heart', 'knot', 'ring', 'shade', 'thicket', 'year'],
+  
+  // NEW RACES
+  
+  // Avian suffixes - bird-like, airy sounds
+  'Avian (Birdfolk)': ['cry', 'dive', 'fall', 'flight', 'gale', 'hawk', 'nest', 'song', 'swoop', 'talon', 'tweet', 'wind', 'air', 'feather', 'glide', 'raptor', 'call', 'wing'],
+  
+  // Goblin suffixes - short, mechanical sounds
+  'Goblin': ['bit', 'chet', 'dob', 'fidget', 'get', 'ick', 'jit', 'kit', 'link', 'nob', 'ock', 'pik', 'rat', 'snik', 'tink', 'wit', 'zak', 'bang'],
+  
+  // Gnoll suffixes - growling, barking sounds
+  'Gnoll': ['ar', 'ash', 'ba', 'claw', 'eth', 'fang', 'grin', 'howl', 'laugh', 'na', 'rend', 'snarl', 'thangs', 'ul', 'ya', 'yena', 'zar', 'jaw'],
+  
+  // Lizardfolk suffixes - hissing, reptilian sounds
+  'Lizardfolk': ['ax', 'claw', 'en', 'eth', 'fang', 'gar', 'hiss', 'ith', 'kex', 'lax', 'mix', 'nak', 'sith', 'thas', 'ur', 'vex', 'xil', 'zash']
 };
 
 // Last name components by race
@@ -138,7 +166,21 @@ export const lastNamePrefixes = {
   'Pixie': ['Blossom', 'Bright', 'Butter', 'Dawn', 'Dew', 'Floral', 'Flower', 'Glitter', 'Glow', 'Honey', 'Light', 'Mist', 'Moon', 'Nectar', 'Petal', 'Rainbow', 'Rose', 'Star'],
   
   // Treant last name prefixes - ancient, trees
-  'Treant': ['Ancient', 'Deep', 'Elder', 'Great', 'Green', 'Heart', 'Maple', 'Moss', 'Oak', 'Old', 'Pine', 'Root', 'Stone', 'Thousand', 'Wild', 'Willow', 'Wood', 'Spring']
+  'Treant': ['Ancient', 'Deep', 'Elder', 'Great', 'Green', 'Heart', 'Maple', 'Moss', 'Oak', 'Old', 'Pine', 'Root', 'Stone', 'Thousand', 'Wild', 'Willow', 'Wood', 'Spring'],
+  
+  // NEW RACES
+  
+  // Avian last name prefixes - aerial, bird-related
+  'Avian (Birdfolk)': ['Air', 'Azure', 'Beak', 'Cloud', 'Crest', 'Dawn', 'Dusk', 'Eye', 'Feath', 'Flight', 'Hawk', 'High', 'Sky', 'Soar', 'Swift', 'Talon', 'Wind', 'Wing'],
+  
+  // Goblin last name prefixes - junk, scavenging
+  'Goblin': ['Brass', 'Broken', 'Cog', 'Copper', 'Crate', 'Grime', 'Junk', 'Loose', 'Mud', 'Pinch', 'Pocket', 'Rust', 'Scrap', 'Shiny', 'Smoke', 'Tin', 'Trap', 'Wire'],
+  
+  // Gnoll last name prefixes - hunting, savage
+  'Gnoll': ['Blood', 'Bone', 'Fang', 'Grin', 'Howl', 'Laugh', 'Mange', 'Moon', 'Night', 'Prowl', 'Red', 'Rib', 'Scav', 'Skull', 'Spot', 'Teeth', 'Whoop', 'Wild'],
+  
+  // Lizardfolk last name prefixes - reptilian, swamp
+  'Lizardfolk': ['Bog', 'Cold', 'Croc', 'Deep', 'Drip', 'Fang', 'Mire', 'Mud', 'Murk', 'Poison', 'Rattle', 'Scale', 'Shade', 'Skin', 'Swamp', 'Thorn', 'Venom', 'Wet']
 };
 
 export const lastNameSuffixes = {
@@ -185,7 +227,21 @@ export const lastNameSuffixes = {
   'Pixie': ['light', 'sparkle', 'wing', 'dust', 'glow', 'shimmer', 'fall', 'light', 'dew', 'lily', 'ling', 'light', 'kin', 'flutter', 'petal', 'glow', 'dance', 'gleam'],
   
   // Treant last name suffixes - trees, age
-  'Treant': ['root', 'wood', 'grove', 'oak', 'wood', 'cloak', 'growth', 'binder', 'bark', 'year', 'sap', 'bark', 'roots', 'branch', 'leaves', 'ringer', 'bloom', 'shade']
+  'Treant': ['root', 'wood', 'grove', 'oak', 'wood', 'cloak', 'growth', 'binder', 'bark', 'year', 'sap', 'bark', 'roots', 'branch', 'leaves', 'ringer', 'bloom', 'shade'],
+  
+  // NEW RACES
+  
+ // Avian last name suffixes - flight, freedom
+  'Avian (Birdfolk)': ['beak', 'caller', 'claw', 'diver', 'eye', 'feather', 'flier', 'glider', 'hawk', 'soarer', 'song', 'swooper', 'talon', 'watcher', 'wing', 'raptor', 'nest', 'sky'],
+  
+  // Goblin last name suffixes - tinkering, scavenging
+  'Goblin': ['finder', 'finger', 'grabber', 'keeper', 'picker', 'pincher', 'snatcher', 'stealer', 'taker', 'thief', 'tinker', 'trader', 'trinket', 'digger', 'nicker', 'sneaker', 'hoarder', 'trap'],
+  
+  // Gnoll last name suffixes - hunting, ferocity
+  'Gnoll': ['biter', 'caller', 'eater', 'hunter', 'killer', 'laugher', 'prowler', 'render', 'ripper', 'runner', 'snarler', 'stalker', 'taker', 'tracker', 'yipper', 'howler', 'gnasher', 'pack'],
+  
+  // Lizardfolk last name suffixes - cold, reptilian
+  'Lizardfolk': ['blood', 'claw', 'coil', 'eye', 'fang', 'scale', 'skin', 'slither', 'spine', 'tail', 'tooth', 'venom', 'watcher', 'crawler', 'lurker', 'basker', 'hisser', 'snapper']
 };
 
 // Helper function to get race-specific name components or default to human components
