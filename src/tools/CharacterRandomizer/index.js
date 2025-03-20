@@ -18,21 +18,21 @@ import {
 export default function CharacterRandomizer() {
   const [character, setCharacter] = useState(null);
   
-  // Get a random item from an array
-  const getRandomItem = (array) => {
+  // Get a random item from an array - memoized to avoid re-creation
+  const getRandomItem = useCallback((array) => {
     return array[Math.floor(Math.random() * array.length)];
-  };
+  }, []);
   
-  // Generate a random name
-  const generateName = () => {
+  // Generate a random name with useCallback
+  const generateName = useCallback(() => {
     const prefix = getRandomItem(namePrefixes);
     const suffix = getRandomItem(nameSuffixes);
     const lastName = getRandomItem(lastNames);
     return `${prefix}${suffix} ${lastName}`;
-  };
+  }, [getRandomItem]);
   
-  // Find suitable deities for a character
-  const findDeities = (race, charClass) => {
+  // Find suitable deities for a character with useCallback
+  const findDeities = useCallback((race, charClass) => {
     // Get deities that match either the race or class
     const matchingDeities = deities.filter(deity => 
       deity.followers.includes(race) || 
@@ -41,7 +41,7 @@ export default function CharacterRandomizer() {
     
     // Return matching deities or a random selection if none match
     return matchingDeities.length > 0 ? matchingDeities : [getRandomItem(deities)];
-  };
+  }, [getRandomItem]);
   
   // Generate a random character using useCallback
   const generateCharacter = useCallback(() => {
@@ -69,7 +69,7 @@ export default function CharacterRandomizer() {
       deity: primaryDeity,
       alternateDeities: alternateDeities
     });
-  }, []);
+  }, [getRandomItem, generateName, findDeities]);
   
   // Generate a character on component mount
   useEffect(() => {
@@ -80,7 +80,7 @@ export default function CharacterRandomizer() {
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl">
       <button 
         className="w-full py-3 px-4 mb-6 bg-gradient-to-r from-stone-700 to-amber-900 text-amber-100 text-lg font-semibold rounded-lg shadow-lg border border-amber-800/50 hover:from-stone-800 hover:to-amber-950"
-        onClick={() => generateCharacter()}
+        onClick={generateCharacter}
       >
         New Character
       </button>
