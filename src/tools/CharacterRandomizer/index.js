@@ -24,11 +24,18 @@ export default function CharacterRandomizer() {
   }, []);
   
   // Generate a random name with useCallback
-  const generateName = useCallback(() => {
-    const prefix = getRandomItem(namePrefixes);
-    const suffix = getRandomItem(nameSuffixes);
-    const lastName = getRandomItem(lastNames);
-    return `${prefix}${suffix} ${lastName}`;
+  const generateName = useCallback((race) => {
+    const { prefixes, suffixes, lastNamePrefixes, lastNameSuffixes } = getRaceNameComponents(race);
+    
+    const prefix = getRandomItem(prefixes);
+    const suffix = getRandomItem(suffixes);
+    const lastNamePrefix = getRandomItem(lastNamePrefixes);
+    const lastNameSuffix = getRandomItem(lastNameSuffixes);
+    
+    const firstName = `${prefix}${suffix}`;
+    const lastName = `${lastNamePrefix}${lastNameSuffix}`;
+    
+    return `${firstName} ${lastName}`;
   }, [getRandomItem]);
   
   // Find suitable deities for a character with useCallback
