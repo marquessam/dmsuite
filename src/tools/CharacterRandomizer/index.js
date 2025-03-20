@@ -23,7 +23,7 @@ export default function CharacterRandomizer() {
     return array[Math.floor(Math.random() * array.length)];
   }, []);
   
-  // Generate a random name
+  // Generate a random name with useCallback
   const generateName = useCallback(() => {
     const prefix = getRandomItem(namePrefixes);
     const suffix = getRandomItem(nameSuffixes);
@@ -31,7 +31,7 @@ export default function CharacterRandomizer() {
     return `${prefix}${suffix} ${lastName}`;
   }, [getRandomItem]);
   
-  // Find suitable deities for a character
+  // Find suitable deities for a character with useCallback
   const findDeities = useCallback((race, charClass) => {
     // Get deities that match either the race or class
     const matchingDeities = deities.filter(deity => 
@@ -43,7 +43,7 @@ export default function CharacterRandomizer() {
     return matchingDeities.length > 0 ? matchingDeities : [getRandomItem(deities)];
   }, [getRandomItem]);
   
-  // Generate a random character
+  // Generate a random character using useCallback
   const generateCharacter = useCallback(() => {
     console.log("Generating character...");
     console.log("Available races:", races);
@@ -90,7 +90,7 @@ export default function CharacterRandomizer() {
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl">
       <button 
         className="w-full py-3 px-4 mb-6 bg-gradient-to-r from-stone-700 to-amber-900 text-amber-100 text-lg font-semibold rounded-lg shadow-lg border border-amber-800/50 hover:from-stone-800 hover:to-amber-950"
-        onClick={generateCharacter}
+        onClick={() => generateCharacter()}
       >
         New Character
       </button>
@@ -106,9 +106,9 @@ export default function CharacterRandomizer() {
           <div className="mb-6 p-4 bg-amber-900/20 rounded-lg border border-amber-800/40 relative">
             <div className="absolute -top-3 left-3 bg-stone-800 px-2 text-amber-200 text-sm font-medium rounded">Description</div>
             <div className="text-amber-100/90">
-              <p className="mb-3"><span className="text-amber-200">Race:</span> {character.raceDescription}</p>
-              <p className="mb-3"><span className="text-amber-200">Class:</span> {character.classDescription}</p>
-              <p><span className="text-amber-200">Appearance:</span> {character.appearance}</p>
+              <p className="mb-3"><span className="text-amber-200 font-semibold">Race:</span> {character.raceDescription}</p>
+              <p className="mb-3"><span className="text-amber-200 font-semibold">Class:</span> {character.classDescription}</p>
+              <p><span className="text-amber-200 font-semibold">Appearance:</span> {character.appearance}</p>
             </div>
           </div>
           
@@ -117,25 +117,25 @@ export default function CharacterRandomizer() {
             <div className="absolute -top-3 left-3 bg-stone-800 px-2 text-amber-200 text-sm font-medium rounded">Faith</div>
             <div className="text-amber-100/90">
               <p className="mb-2">
-                <span className="text-amber-200">Primary Deity:</span> <span className="font-semibold">{character.deity.name}</span>, {character.deity.domain}
+                <span className="text-amber-200 font-semibold">Primary Deity:</span> <span className="font-semibold">{character.deity.name}</span>, {character.deity.domain}
               </p>
               <p className="text-sm mb-2">{character.deity.description}</p>
               
-              <p className="mb-2"><span className="text-amber-200">Holy Symbol:</span> {character.deity.symbol}</p>
+              <p className="mb-2"><span className="text-amber-200 font-semibold">Holy Symbol:</span> {character.deity.symbol}</p>
               
               <div className="mb-2">
-                <p className="text-amber-200 mb-1">Follower Requirements:</p>
+                <p className="text-amber-200 font-semibold mb-1">Follower Requirements:</p>
                 <p className="text-sm">{character.deity.requirements}</p>
               </div>
               
               <div className="mb-2">
-                <p className="text-amber-200 mb-1">Follower Taboos:</p>
+                <p className="text-amber-200 font-semibold mb-1">Follower Taboos:</p>
                 <p className="text-sm">{character.deity.taboos}</p>
               </div>
               
               {character.alternateDeities.length > 0 && (
                 <div className="mt-3">
-                  <p className="text-amber-200 text-sm">Other Compatible Deities:</p>
+                  <p className="text-amber-200 font-semibold text-sm">Other Compatible Deities:</p>
                   <ul className="list-disc list-inside text-sm pl-2 mt-1">
                     {character.alternateDeities.map((deity, index) => (
                       <li key={index}><span className="font-semibold">{deity.name}</span> ({deity.domain})</li>
