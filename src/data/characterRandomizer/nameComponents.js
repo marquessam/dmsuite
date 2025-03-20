@@ -243,6 +243,256 @@ export const lastNameSuffixes = {
   // Lizardfolk last name suffixes - cold, reptilian
   'Lizardfolk': ['blood', 'claw', 'coil', 'eye', 'fang', 'scale', 'skin', 'slither', 'spine', 'tail', 'tooth', 'venom', 'watcher', 'crawler', 'lurker', 'basker', 'hisser', 'snapper']
 };
+export const additionalNamePrefixes = {
+  'Half-Elf': ['Aer', 'Bran', 'Cal', 'Dar', 'Elr', 'Fae', 'Gal', 'Har', 'Jor', 'Kir', 'Lan', 'Mel', 'Nor', 'Orn', 'Pae', 'Quin', 'Ril', 'Syl', 'Tae', 'Val'],
+  
+  'Half-Orc': ['Ag', 'Bru', 'Dor', 'Gar', 'Hak', 'Kra', 'Mor', 'Nar', 'Ren', 'Shad', 'Thar', 'Urg', 'Vrak', 'Zag', 'Grom', 'Khal', 'Lok', 'Ruk', 'Thog', 'Vor'],
+  
+  'Tiefling': ['Ash', 'Bane', 'Crim', 'Dread', 'Flair', 'Grim', 'Hex', 'Isk', 'Jag', 'Karn', 'Luc', 'Mal', 'Nix', 'Omen', 'Pyre', 'Ruin', 'Sin', 'Tyr', 'Vex', 'Zar'],
+  
+  'Aarakocra': ['Air', 'Breeze', 'Caw', 'Down', 'Eye', 'Feath', 'Gust', 'High', 'Jet', 'Kite', 'Light', 'Mount', 'Nest', 'Open', 'Perch', 'Quill', 'Rise', 'Soar', 'Tall', 'Wing'],
+  
+  'Aasimar': ['Aur', 'Bless', 'Cel', 'Div', 'Eth', 'Faith', 'Glow', 'Hal', 'Il', 'Just', 'Kal', 'Lum', 'Mer', 'Nim', 'Ora', 'Pris', 'Raph', 'Sera', 'True', 'Vir'],
+  
+  'Bugbear': ['Brok', 'Crag', 'Drub', 'Flak', 'Grub', 'Hak', 'Krash', 'Lug', 'Morg', 'Nok', 'Pug', 'Ruk', 'Skrag', 'Tark', 'Ugg', 'Vrak', 'Wak', 'Yak', 'Zark', 'Drog'],
+  
+  'Changeling': ['Any', 'Blank', 'Cloak', 'Dusk', 'Echo', 'Facade', 'Guise', 'Hidden', 'Ink', 'Jest', 'Kith', 'Loom', 'Mask', 'Nim', 'Other', 'Path', 'Quill', 'Ruse', 'Shift', 'Twin'],
+  
+  'Duergar (Grey Dwarf)': ['Az', 'Blag', 'Chul', 'Durg', 'Ghar', 'Krag', 'Mord', 'Nark', 'Olag', 'Rozk', 'Skarn', 'Thul', 'Uld', 'Vond', 'Zark', 'Drom', 'Glam', 'Korg', 'Thrin', 'Xorn'],
+  
+  'Firbolg': ['Ald', 'Bran', 'Cor', 'Drum', 'Eld', 'Fir', 'Gald', 'Hald', 'Iron', 'Jor', 'Kild', 'Lorn', 'Mor', 'Nor', 'Oak', 'Pine', 'Quill', 'Rum', 'Stal', 'Thorn'],
+  
+  'Genasi': ['Breeze', 'Cinder', 'Deep', 'Earth', 'Flow', 'Gale', 'Heat', 'Ice', 'Jet', 'Kin', 'Lava', 'Mist', 'North', 'Ocean', 'Pool', 'Quake', 'Ripple', 'Stone', 'Tide', 'Wave'],
+  
+  'Gith': ['Aar', 'Dak', 'Fer', 'Gith', 'Hur', 'Ja', 'Kal', 'Lich', 'Mor', 'Nor', 'Pik', 'Quar', 'Ris', 'Su', 'Tel', 'Uthor', 'Vil', 'Xar', 'Yith', 'Zar'],
+  
+  'Goliath': ['Ag', 'Ber', 'Dar', 'Egg', 'Fur', 'Grav', 'Heg', 'Ili', 'Jar', 'Kav', 'Lok', 'Mant', 'Nag', 'Ov', 'Pau', 'Rau', 'Sar', 'Tar', 'Vag', 'Weg'],
+  
+  'Hobgoblin': ['Azr', 'Brud', 'Cras', 'Drak', 'Gaz', 'Hazz', 'Krud', 'Laz', 'Maz', 'Nor', 'Ooz', 'Pruk', 'Rekk', 'Shaz', 'Takk', 'Urz', 'Vaz', 'Wux', 'Yaz', 'Zar'],
+  
+  'Kenku': ['Chit', 'Click', 'Clink', 'Crash', 'Creak', 'Ding', 'Glim', 'Jang', 'Plink', 'Plunk', 'Rattle', 'Ring', 'Rustle', 'Snap', 'Squawk', 'Tink', 'Twang', 'Whir', 'Whisk', 'Zip'],
+  
+  'Kobold': ['Arix', 'Bix', 'Clink', 'Drak', 'Eep', 'Fik', 'Gix', 'Hix', 'Irk', 'Jink', 'Kip', 'Lerk', 'Mik', 'Nix', 'Orp', 'Pip', 'Quip', 'Rak', 'Skik', 'Tip'],
+  
+  'Leonin': ['Ajak', 'Bri', 'Chir', 'Drom', 'Erde', 'Fier', 'Grar', 'Holm', 'Irr', 'Jak', 'Kro', 'Leo', 'Mag', 'Nast', 'Orn', 'Prob', 'Ral', 'Sable', 'Thar', 'Vad'],
+  
+  'Locathah': ['Ar', 'Bub', 'Cor', 'Dor', 'Eb', 'Fin', 'Gill', 'Har', 'Ink', 'Jib', 'Kal', 'Lob', 'Mar', 'Nar', 'Oar', 'Pel', 'Quar', 'Ree', 'Sal', 'Tide'],
+  
+  'Loxodon': ['Bel', 'Cha', 'Dru', 'Er', 'Fin', 'Gan', 'Hathi', 'Ilra', 'Jam', 'Ket', 'Lox', 'Mau', 'Nil', 'Oro', 'Paj', 'Qin', 'Rai', 'Sen', 'Tor', 'Vaj'],
+  
+  'Minotaur (Ravnica)': ['Ar', 'Bat', 'Crag', 'Dor', 'Ezk', 'Fal', 'Gor', 'Hrak', 'Igr', 'Jor', 'Krag', 'Lok', 'Mor', 'Nrg', 'Ork', 'Prag', 'Qor', 'Rag', 'Skr', 'Tor'],
+  
+  'Minotaur (Theros)': ['Ast', 'Bov', 'Cyr', 'Dex', 'Eur', 'Fen', 'Gor', 'Hel', 'Ikar', 'Kir', 'Lys', 'Myr', 'Nax', 'Ox', 'Phor', 'Qar', 'Rho', 'Syr', 'Tau', 'Ur'],
+  
+  'Satyr': ['Alt', 'Bac', 'Cyn', 'Dio', 'Ech', 'Fau', 'Gal', 'Hec', 'Icar', 'Joll', 'Kyr', 'Lar', 'Mez', 'Nym', 'Orb', 'Pan', 'Quin', 'Rev', 'Syl', 'Tyr'],
+  
+  'Shifter': ['Ash', 'Badg', 'Claw', 'Darr', 'Echo', 'Fang', 'Growl', 'Hunt', 'Ivy', 'Jump', 'Krel', 'Long', 'Moon', 'Night', 'Oak', 'Paw', 'Quick', 'Rav', 'Swift', 'Tusk'],
+  
+  'Simic Hybrid': ['Adapt', 'Bio', 'Crest', 'Dev', 'Evo', 'Fin', 'Gill', 'Hydro', 'Inc', 'Jak', 'Kel', 'Lev', 'Mer', 'Nim', 'Ooze', 'Poda', 'Qual', 'Rime', 'Span', 'Trop'],
+  
+  'Svirfneblin (Deep Gnome)': ['Belk', 'Cryn', 'Dark', 'Eck', 'Flint', 'Gem', 'Hor', 'Irr', 'Jak', 'Kiv', 'Lur', 'Min', 'Nak', 'Orr', 'Peb', 'Quiv', 'Rok', 'Shim', 'Turv', 'Vex'],
+  
+  'Tortle': ['Arch', 'Beac', 'Coral', 'Drift', 'Ebb', 'Flow', 'Gul', 'Hard', 'Isla', 'Jour', 'Koa', 'Lag', 'Mar', 'Nav', 'Oce', 'Pebble', 'Quill', 'Rip', 'Sand', 'Tide'],
+  
+  'Triton': ['Adel', 'Bryn', 'Cor', 'Del', 'Ebb', 'Finn', 'Glau', 'Hala', 'Iar', 'Jalar', 'Kora', 'Lir', 'Mal', 'Nar', 'Orin', 'Pelor', 'Quar', 'Rill', 'Sker', 'Trit'],
+  
+  'Vampire (Legacy)': ['Alder', 'Blood', 'Crim', 'Drac', 'Emb', 'Fang', 'Grim', 'Haunt', 'Imp', 'Jet', 'Kron', 'Luc', 'Mort', 'Noc', 'Orm', 'Phan', 'Quint', 'Rav', 'Scar', 'Thorne'],
+  
+  'Vedalken': ['Ana', 'Bril', 'Cal', 'Det', 'Epi', 'Fac', 'Gul', 'Hap', 'Inv', 'Jin', 'Kal', 'Log', 'Met', 'Num', 'Occ', 'Pon', 'Quar', 'Ral', 'Sig', 'The'],
+  
+  'Warforged': ['Anchor', 'Blade', 'Cog', 'Drift', 'Edge', 'Flint', 'Gear', 'Hash', 'Iron', 'Jack', 'Keen', 'Lance', 'Mill', 'Nail', 'Oar', 'Pike', 'Ratchet', 'Steel', 'Tap', 'Vault'],
+  
+  'Yuan-Ti Pureblood': ['Asa', 'Besh', 'Cass', 'Damu', 'Eshe', 'Fane', 'Glis', 'Heth', 'Ish', 'Jeth', 'Kass', 'Lith', 'Mes', 'Neth', 'Oshe', 'Pesh', 'Quem', 'Ras', 'Slis', 'Teth']
+};
+
+// Additional name suffixes
+export const additionalNameSuffixes = {
+  'Half-Elf': ['ael', 'ara', 'eth', 'iel', 'ion', 'is', 'or', 'ual', 'wyn', 'yn', 'anna', 'ere', 'ian', 'ira', 'lian', 'rin', 'thien', 'vera', 'yra', 'zia'],
+  
+  'Half-Orc': ['ak', 'ar', 'ash', 'eg', 'gor', 'gug', 'kar', 'nak', 'og', 'rak', 'ruk', 'tar', 'ug', 'uk', 'ura', 'akh', 'all', 'arg', 'gak', 'mak'],
+  
+  'Tiefling': ['adin', 'afir', 'akas', 'akmenos', 'arius', 'axan', 'cerces', 'ekemon', 'emon', 'evius', 'ichar', 'idos', 'ifer', 'ikor', 'ios', 'ius', 'opheles', 'or', 'thus', 'usto'],
+  
+  'Aarakocra': ['ash', 'call', 'chirp', 'cree', 'daal', 'flit', 'gust', 'keer', 'kwaa', 'loor', 'meer', 'nir', 'raa', 'seen', 'seer', 'soar', 'sula', 'trach', 'wind', 'zeed'],
+  
+  'Aasimar': ['ael', 'ami', 'ana', 'anni', 'ar', 'arah', 'aret', 'athiel', 'est', 'iel', 'ine', 'ira', 'liel', 'mari', 'niel', 'orah', 'phyr', 'riel', 'tiel', 'xis'],
+  
+  'Bugbear': ['bash', 'claw', 'crush', 'darg', 'fist', 'gnak', 'grush', 'hash', 'jibb', 'krag', 'lug', 'morg', 'narl', 'ong', 'pung', 'rok', 'smash', 'targ', 'wak', 'zag'],
+  
+  'Changeling': ['bit', 'face', 'form', 'guise', 'lier', 'mask', 'mien', 'none', 'other', 'pose', 'self', 'shade', 'shell', 'shift', 'skin', 'slate', 'tale', 'veil', 'ware', 'who'],
+  
+  'Duergar (Grey Dwarf)': ['ack', 'anvik', 'ark', 'bar', 'dek', 'derk', 'dig', 'dom', 'dorn', 'garn', 'grim', 'hek', 'iggs', 'kor', 'lode', 'mok', 'nack', 'rak', 'tor', 'vek'],
+  
+  'Firbolg': ['arth', 'beam', 'carn', 'deep', 'flor', 'glen', 'gorn', 'heart', 'hew', 'lan', 'leaf', 'lore', 'moss', 'path', 'root', 'stride', 'thorn', 'wood', 'wort', 'yew'],
+  
+  'Genasi': ['blaze', 'born', 'breath', 'burst', 'deep', 'flow', 'flux', 'gale', 'heart', 'light', 'melt', 'quake', 'ridge', 'rock', 'shine', 'spark', 'stream', 'surge', 'tide', 'wave'],
+  
+  'Gith': ['ak', 'al', 'ath', 'dak', 'dith', 'du', 'k', 'kk', 'lith', 'm', 'rn', 'sh', 'th', 'thid', 'v', 'val', 'vera', 'x', 'y', 'zaer'],
+  
+  'Goliath': ['ak', 'al', 'amak', 'arot', 'ega', 'ered', 'helmn', 'idon', 'igig', 'ikan', 'kanu', 'katho', 'ki', 'lan', 'milat', 'nalla', 'o', 'oroth', 'reo', 'thal'],
+  
+  'Hobgoblin': ['akt', 'arg', 'ast', 'dar', 'ekt', 'gak', 'gar', 'git', 'grat', 'jak', 'krat', 'kut', 'lag', 'lurk', 'narek', 'rag', 'rat', 'rok', 'tak', 'zit'],
+  
+  'Kenku': ['chat', 'chir', 'clatter', 'crash', 'creak', 'jingle', 'ping', 'pling', 'rustle', 'scrape', 'screech', 'shriek', 'skree', 'squawk', 'thud', 'tink', 'tweet', 'whir', 'whistle', 'whoosh'],
+  
+  'Kobold': ['ark', 'ax', 'dip', 'ex', 'fex', 'gix', 'ix', 'kex', 'kip', 'nix', 'ock', 'ok', 'ox', 'p', 'pak', 'pik', 'ripper', 'tik', 'wex', 'yip'],
+  
+  'Leonin': ['ar', 'arus', 'atr', 'aya', 'eros', 'ian', 'ias', 'ikis', 'ios', 'ipan', 'iro', 'is', 'ius', 'or', 'ora', 'oros', 'os', 'r', 'sis', 'stus'],
+  
+  'Locathah': ['ar', 'asta', 'blue', 'bubble', 'coral', 'current', 'deep', 'fin', 'flow', 'froth', 'gill', 'hook', 'mer', 'net', 'pearl', 'reef', 'salt', 'sand', 'shell', 'weed'],
+  
+  'Loxodon': ['ba', 'bash', 'baj', 'bor', 'dah', 'dash', 'dir', 'do', 'dross', 'ev', 'hara', 'jin', 'lok', 'moth', 'odo', 'rat', 'rash', 'tho', 'thun', 'us'],
+  
+  'Minotaur (Ravnica)': ['ag', 'ak', 'da', 'gar', 'grax', 'il', 'ioth', 'jor', 'kos', 'kral', 'kras', 'mak', 'mor', 'narek', 'on', 'orast', 'ox', 'thag', 'thok', 'thos'],
+  
+  'Minotaur (Theros)': ['aeus', 'agoras', 'ander', 'andros', 'athon', 'eikos', 'enes', 'enthos', 'eros', 'eus', 'ian', 'ios', 'ippe', 'ippos', 'is', 'ius', 'on', 'or', 'os', 'us'],
+  
+  'Satyr': ['aris', 'arus', 'dor', 'eros', 'ian', 'ikles', 'ios', 'ippus', 'is', 'ius', 'kon', 'lyn', 'mon', 'nos', 'on', 'or', 'os', 'ros', 'sus', 'xus'],
+  
+  'Shifter': ['claw', 'fang', 'fur', 'growl', 'howl', 'leap', 'paw', 'rage', 'razor', 'rend', 'roar', 'runner', 'shadow', 'stalker', 'stripe', 'talon', 'tooth', 'tracker', 'watcher', 'wild'],
+  
+  'Simic Hybrid': ['adon', 'ara', 'blast', 'crest', 'deep', 'fin', 'flow', 'form', 'growth', 'hydra', 'morph', 'plex', 'pore', 'scale', 'spawn', 'tide', 'trope', 'upa', 'vat', 'warp'],
+  
+  'Svirfneblin (Deep Gnome)': ['ber', 'bik', 'bur', 'daer', 'dek', 'din', 'dor', 'fast', 'gem', 'ik', 'il', 'mit', 'nik', 'on', 'pik', 'rim', 'rok', 'tin', 'ur', 'ver'],
+  
+  'Tortle': ['agoon', 'bay', 'cean', 'est', 'grove', 'ife', 'ile', 'iner', 'land', 'logger', 'nds', 'nel', 'ney', 'nner', 'reef', 'sel', 'shell', 'shore', 'tide', 'veler'],
+  
+  'Triton': ['an', 'arin', 'as', 'bis', 'don', 'ian', 'ios', 'is', 'ius', 'les', 'lios', 'llan', 'llara', 'lles', 'llir', 'meros', 'na', 'nus', 'on', 'us'],
+  
+  'Vampire (Legacy)': ['ange', 'blood', 'crest', 'dimir', 'dusk', 'fang', 'gast', 'grave', 'hex', 'krev', 'loth', 'mar', 'mir', 'morte', 'night', 'quist', 'shade', 'thorne', 'vein', 'wyrm'],
+  
+  'Vedalken': ['ax', 'drius', 'fo', 'ic', 'ik', 'is', 'ix', 'lar', 'lian', 'lin', 'lyr', 'mon', 'ptis', 'qar', 'rian', 'rin', 'run', 'tis', 'vac', 'vix'],
+  
+  'Warforged': ['arm', 'blade', 'bolt', 'forge', 'gear', 'hammer', 'heart', 'iron', 'mech', 'metal', 'plate', 'shield', 'smith', 'spark', 'steel', 'tank', 'vault', 'ward', 'wire', 'wrench'],
+  
+  'Yuan-Ti Pureblood': ['ali', 'ar', 'as', 'asa', 'ashi', 'ashti', 'ess', 'ett', 'ith', 'ixil', 'izi', 'kess', 'kis', 'liss', 'mash', 'mez', 'neth', 'ras', 'sas', 'thi']
+};
+
+// Additional last name prefixes
+export const additionalLastNamePrefixes = {
+  'Half-Elf': ['Amber', 'Autumn', 'Bright', 'Dusk', 'Dawn', 'Day', 'Dew', 'Ever', 'Far', 'Green', 'High', 'Light', 'Moon', 'Morning', 'Night', 'Rain', 'River', 'Shadow', 'Silver', 'Star'],
+  
+  'Half-Orc': ['Battle', 'Blood', 'Bone', 'Broken', 'Crag', 'Death', 'Doom', 'Fierce', 'Fire', 'Gore', 'Grim', 'Iron', 'Rage', 'Rock', 'Scar', 'Stone', 'Storm', 'Strong', 'War', 'Wild'],
+  
+  'Tiefling': ['Ash', 'Black', 'Blood', 'Cinder', 'Crime', 'Dark', 'Deep', 'Devil', 'Doom', 'Dread', 'Fall', 'Fear', 'Flint', 'Fury', 'Gloom', 'Hell', 'Night', 'Rage', 'Sin', 'Winter'],
+  
+  'Aarakocra': ['Air', 'Breeze', 'Bright', 'Cloud', 'Dawn', 'Dusk', 'Far', 'Fast', 'Free', 'High', 'Keen', 'Light', 'Open', 'Quick', 'Sharp', 'Sky', 'Soar', 'Swift', 'Vast', 'Wind'],
+  
+  'Aasimar': ['Bright', 'Celestial', 'Dawn', 'Divine', 'Exalted', 'Glory', 'Golden', 'Good', 'Grace', 'Halo', 'Heaven', 'Holy', 'Light', 'Noble', 'Pure', 'Radiant', 'Sacred', 'Saint', 'Silver', 'True'],
+  
+  'Bugbear': ['Big', 'Blood', 'Bone', 'Break', 'Brute', 'Crush', 'Dark', 'Death', 'Doom', 'Gore', 'Grim', 'Gut', 'Kill', 'Night', 'Pain', 'Rip', 'Savage', 'Scar', 'Shadow', 'Skull'],
+  
+  'Changeling': ['Blank', 'Cloud', 'Ever', 'Fickle', 'Fluid', 'Gray', 'Guise', 'Lost', 'Many', 'Mist', 'Morph', 'Mystery', 'Phantom', 'Riddle', 'Shadow', 'Shift', 'Swift', 'True', 'Unknown', 'Veil'],
+  
+  'Duergar (Grey Dwarf)': ['Ash', 'Black', 'Dark', 'Deep', 'Doom', 'Dusk', 'Gloom', 'Gray', 'Grim', 'Hidden', 'Iron', 'Night', 'Obsidian', 'Onyx', 'Shadow', 'Slate', 'Smoke', 'Stone', 'Under', 'Void'],
+  
+  'Firbolg': ['Ancient', 'Boulder', 'Deep', 'Elder', 'Fern', 'Forest', 'Gentle', 'Green', 'Grove', 'Hill', 'Moss', 'Mountain', 'Oak', 'Pine', 'River', 'Stone', 'Tall', 'Tree', 'Wild', 'Wood'],
+  
+  'Genasi': ['Ash', 'Blaze', 'Boulder', 'Clay', 'Crystal', 'Ember', 'Flame', 'Flow', 'Flux', 'Foam', 'Frost', 'Geyser', 'Lava', 'Mist', 'Mud', 'Pebble', 'Ripple', 'Spark', 'Stone', 'Wave'],
+  
+  'Gith': ['Astral', 'Battle', 'Blade', 'Free', 'Gith', 'Mind', 'Oath', 'Plane', 'Psi', 'Rage', 'Red', 'Silver', 'Song', 'Steel', 'Storm', 'Sword', 'Thought', 'War', 'Wind', 'Zil'],
+  
+  'Goliath': ['Battle', 'Cloud', 'Cold', 'Crag', 'Dawn', 'Fell', 'Fierce', 'Flint', 'Frost', 'High', 'Iron', 'Lone', 'Mammoth', 'Mountain', 'Peak', 'Rock', 'Sky', 'Stone', 'Storm', 'Thunder'],
+  
+  'Hobgoblin': ['Black', 'Blood', 'Claw', 'Dark', 'Death', 'Dire', 'Doom', 'Dread', 'Fear', 'Fire', 'Grim', 'Iron', 'Night', 'Red', 'Scar', 'Sharp', 'Skull', 'Smoke', 'War', 'Wrath'],
+  
+  'Kenku': ['Brass', 'Chime', 'Copper', 'Echo', 'Glass', 'Jingle', 'Laughter', 'Mimicry', 'Mirror', 'Raven', 'Rustle', 'Shadow', 'Sharp', 'Shell', 'Silver', 'Sound', 'Theft', 'Tinkle', 'Whisper', 'Wind'],
+  
+  'Kobold': ['Copper', 'Deep', 'Dim', 'Dragon', 'Dark', 'Flickering', 'Gem', 'Glint', 'Glow', 'Gold', 'Little', 'Mine', 'Quick', 'Red', 'Rock', 'Scaly', 'Silver', 'Swift', 'Tiny', 'Tunnel'],
+  
+  'Leonin': ['Amber', 'Brave', 'Dawn', 'Fierce', 'Gold', 'Golden', 'Honor', 'Hunt', 'Keen', 'Maned', 'Night', 'Noble', 'Proud', 'Roar', 'Savanna', 'Sun', 'Swift', 'Tall', 'Thunder', 'Wild'],
+  
+  'Locathah': ['Blue', 'Coral', 'Current', 'Deep', 'Fishing', 'Flow', 'Foam', 'Free', 'Gill', 'Ocean', 'Pearl', 'Reef', 'River', 'Salt', 'Scale', 'Sea', 'Tide', 'Wave', 'Wet', 'Weed'],
+  
+  'Loxodon': ['Ancient', 'Calm', 'Deep', 'Eternal', 'Far', 'Gray', 'Great', 'Heavy', 'Honored', 'Iron', 'Long', 'Memory', 'Mind', 'Quiet', 'Remembered', 'Sigiled', 'Stone', 'Thought', 'Tusked', 'Wise'],
+  
+  'Minotaur (Ravnica)': ['Battle', 'Black', 'Blood', 'Brass', 'Bronze', 'Bull', 'Crag', 'Crimson', 'Dark', 'Fire', 'Fury', 'Gold', 'Gore', 'Horn', 'Iron', 'Red', 'Storm', 'Thunder', 'War', 'Wreck'],
+  
+  'Minotaur (Theros)': ['Ancient', 'Bronze', 'Bull', 'Dark', 'Doom', 'Fate', 'Glory', 'Gold', 'Great', 'Horn', 'Iron', 'Labyrinth', 'Maze', 'Mighty', 'Myth', 'Old', 'Path', 'Stone', 'Titan', 'Wonder'],
+  
+  'Satyr': ['Autumn', 'Charming', 'Dance', 'Dusk', 'Ever', 'Fey', 'Forest', 'Free', 'Goat', 'Gold', 'Green', 'Laugh', 'Meadow', 'Merry', 'Music', 'Oak', 'Pan', 'Piping', 'Wild', 'Wine'],
+  
+  'Shifter': ['Autumn', 'Blood', 'Claw', 'Dusk', 'Far', 'Fang', 'Fell', 'Forest', 'Mountain', 'Night', 'River', 'Shadow', 'Silent', 'Silver', 'Swift', 'Tooth', 'Wild', 'Wind', 'Winter', 'Wood'],
+  
+  'Simic Hybrid': ['Adapt', 'Aqua', 'Bio', 'Blue', 'Coral', 'Cyan', 'Deep', 'Evolve', 'Flow', 'Flux', 'Green', 'Growth', 'Hybrid', 'Marine', 'Muta', 'Ocean', 'Prime', 'Regen', 'Sea', 'Tide'],
+  
+  'Svirfneblin (Deep Gnome)': ['Black', 'Cavern', 'Crystal', 'Dark', 'Deep', 'Dim', 'Flint', 'Gem', 'Glitter', 'Granite', 'Grey', 'Hidden', 'Iron', 'Mithral', 'Obsidian', 'Onyx', 'Shadow', 'Silent', 'Stone', 'Under'],
+  
+  'Tortle': ['Amber', 'Ancient', 'Blue', 'Calm', 'Coral', 'Crystal', 'Deep', 'Green', 'Jade', 'Ocean', 'Old', 'Pearl', 'Quiet', 'Reef', 'Sand', 'Serene', 'Shell', 'Shore', 'Tide', 'Wave'],
+  
+  'Triton': ['Aqua', 'Azure', 'Blue', 'Coral', 'Crystal', 'Deep', 'Foam', 'Jade', 'Marine', 'Ocean', 'Pearl', 'Regal', 'Salt', 'Sea', 'Surf', 'Tide', 'Trench', 'Turquoise', 'Water', 'Wave'],
+  
+  'Vampire (Legacy)': ['Ancient', 'Black', 'Blood', 'Crimson', 'Dark', 'Dusk', 'Eternal', 'Fang', 'Gloom', 'Grave', 'Gray', 'Haunt', 'Mist', 'Night', 'Pale', 'Red', 'Shadow', 'Shade', 'Tomb', 'Veil'],
+  
+  'Vedalken': ['Aether', 'Blue', 'Construct', 'Crystal', 'Efficient', 'Ether', 'Flux', 'Grand', 'Ideal', 'Invention', 'Logic', 'Mech', 'Method', 'Perfect', 'Progress', 'Reason', 'Scholar', 'Theory', 'Thought', 'Wonder'],
+  
+  'Warforged': ['Adamant', 'Bronze', 'Brass', 'Copper', 'Flux', 'Forge', 'Gold', 'Iron', 'Mithral', 'Obsidian', 'Onyx', 'Opal', 'Platinum', 'Rune', 'Silver', 'Steel', 'Stone', 'Thunder', 'Titanium', 'Uru'],
+  
+  'Yuan-Ti Pureblood': ['Ancient', 'Coil', 'Cold', 'Dark', 'Eternal', 'Fang', 'Forked', 'Hidden', 'High', 'Hiss', 'Obsidian', 'Poison', 'Royal', 'Scale', 'Secret', 'Serpent', 'Silent', 'Sleek', 'Venom', 'Viper']
+};
+
+// Additional last name suffixes
+export const additionalLastNameSuffixes = {
+  'Half-Elf': ['blossom', 'branch', 'breeze', 'brook', 'flower', 'glade', 'grove', 'leaf', 'light', 'moon', 'petal', 'river', 'shadow', 'song', 'star', 'vale', 'water', 'whisper', 'wind', 'wood'],
+  
+  'Half-Orc': ['axe', 'basher', 'blade', 'blood', 'breaker', 'cleaver', 'crusher', 'cutter', 'fang', 'fist', 'killer', 'ripper', 'roar', 'scar', 'skull', 'slayer', 'smasher', 'tusk', 'warrior', 'wolf'],
+  
+  'Tiefling': ['band', 'blade', 'blood', 'bringer', 'caller', 'dancer', 'darkness', 'flame', 'gaze', 'hunter', 'keeper', 'night', 'seeker', 'shadow', 'sin', 'singer', 'slayer', 'watcher', 'whisper', 'winter'],
+  
+  'Aarakocra': ['beak', 'claw', 'diver', 'feather', 'flight', 'flyer', 'glider', 'screech', 'sky', 'soarer', 'swooper', 'talon', 'watcher', 'whistle', 'wind', 'windrider', 'wing', 'singer', 'nest', 'cloud'],
+  
+  'Aasimar': ['bearer', 'blessed', 'bright', 'bringer', 'dawn', 'day', 'guard', 'heart', 'hope', 'kissed', 'light', 'marked', 'ray', 'shield', 'singer', 'soul', 'spirit', 'star', 'touched', 'watcher'],
+  
+  'Bugbear': ['basher', 'breaker', 'claw', 'cleaver', 'crusher', 'ear', 'eye', 'fang', 'fist', 'foot', 'growl', 'lurker', 'mauler', 'ripper', 'roarer', 'skull', 'smasher', 'stalker', 'taker', 'tooth'],
+  
+  'Changeling': ['face', 'form', 'guise', 'mask', 'morph', 'name', 'one', 'path', 'self', 'shade', 'shadow', 'shape', 'shell', 'shift', 'shifter', 'skin', 'truth', 'veil', 'visage', 'walker'],
+  
+  'Duergar (Grey Dwarf)': ['anvil', 'axe', 'beard', 'cleaver', 'delver', 'digger', 'forge', 'hammer', 'hand', 'heart', 'iron', 'miner', 'pick', 'shaper', 'shield', 'stone', 'striker', 'tunnel', 'under', 'worker'],
+  
+  'Firbolg': ['bark', 'branch', 'foot', 'friend', 'glade', 'grove', 'guard', 'heart', 'keeper', 'leaf', 'meadow', 'oak', 'path', 'root', 'speaker', 'stride', 'tender', 'thorn', 'watcher', 'wood'],
+  
+  'Genasi': ['blast', 'born', 'breath', 'caller', 'crest', 'flow', 'force', 'former', 'fury', 'keeper', 'kin', 'mover', 'seeker', 'shard', 'shaper', 'spark', 'surge', 'tide', 'wielder', 'wind'],
+  
+  'Gith': ['blade', 'breaker', 'destroyer', 'fist', 'freedom', 'hunter', 'killer', 'mind', 'oath', 'raider', 'seeker', 'slayer', 'stalker', 'sword', 'thought', 'walker', 'warrior', 'weaver', 'wind', 'wrack'],
+  
+  'Goliath': ['bearer', 'bender', 'born', 'breaker', 'bringer', 'caller', 'carrier', 'climber', 'daughter', 'friend', 'heart', 'herder', 'hunter', 'jumper', 'master', 'slayer', 'son', 'tracker', 'walker', 'watcher'],
+  
+  'Hobgoblin': ['blade', 'blood', 'claw', 'cleaver', 'crusher', 'fang', 'fist', 'hand', 'killer', 'master', 'ripper', 'scar', 'seeker', 'skull', 'slayer', 'smasher', 'sword', 'taker', 'warrior', 'wrecker'],
+  
+  'Kenku': ['caller', 'chatter', 'claw', 'collector', 'echo', 'keeper', 'mimic', 'mocker', 'picker', 'repeater', 'snatcher', 'speaker', 'stealer', 'taker', 'talker', 'thief', 'voice', 'watcher', 'whisper', 'windspeaker'],
+  
+  'Kobold': ['biter', 'caller', 'claw', 'delver', 'digger', 'finder', 'hand', 'hunter', 'keeper', 'miner', 'scale', 'scurrier', 'seeker', 'setter', 'sneak', 'speaker', 'trap', 'tunneler', 'watcher', 'worker'],
+  
+  'Leonin': ['claw', 'fang', 'heart', 'hunter', 'keeper', 'king', 'mane', 'pride', 'protector', 'prowler', 'roar', 'runner', 'stalker', 'sun', 'tail', 'tooth', 'watcher', 'whisker', 'wild', 'wind'],
+  
+  'Locathah': ['current', 'diver', 'fin', 'fisher', 'flow', 'gill', 'keeper', 'pearl', 'reef', 'river', 'scale', 'sea', 'seeker', 'shore', 'stream', 'swimmer', 'tide', 'wake', 'water', 'wave'],
+  
+  'Loxodon': ['bringer', 'caller', 'heart', 'hide', 'horn', 'keeper', 'memory', 'mind', 'path', 'protector', 'rememberer', 'sage', 'seeker', 'speaker', 'thought', 'trunk', 'tusk', 'walker', 'watcher', 'wisdom'],
+  
+  'Minotaur (Ravnica)': ['bearer', 'breaker', 'cleaver', 'crusher', 'destroyer', 'fist', 'gore', 'hammer', 'hand', 'heart', 'horn', 'rage', 'ram', 'seeker', 'slayer', 'smasher', 'striker', 'taker', 'warrior', 'wrecker'],
+  
+  'Minotaur (Theros)': ['bearer', 'born', 'breaker', 'bringer', 'delver', 'finder', 'horn', 'keeper', 'maker', 'master', 'might', 'seeker', 'singer', 'slayer', 'strider', 'turner', 'walker', 'weaver', 'wielder', 'worker'],
+  
+  'Satyr': ['dancer', 'drinker', 'foot', 'friend', 'heart', 'hoof', 'horn', 'joy', 'laugh', 'leaf', 'music', 'piper', 'player', 'revel', 'singer', 'sky', 'smile', 'song', 'wine', 'woods'],
+  
+  'Shifter': ['claw', 'fang', 'feral', 'fur', 'growl', 'heart', 'hide', 'howl', 'hunter', 'instinct', 'moon', 'pelt', 'prowler', 'runner', 'scent', 'shadow', 'stalker', 'wild', 'watcher', 'wolf'],
+  
+  'Simic Hybrid': ['alter', 'born', 'breather', 'caller', 'crafter', 'drifter', 'evolver', 'fin', 'flow', 'former', 'gilled', 'grafter', 'growth', 'hybrid', 'krasis', 'maker', 'mutant', 'scale', 'shifter', 'spawn'],
+  
+  'Svirfneblin (Deep Gnome)': ['cave', 'cutter', 'delver', 'digger', 'eye', 'finder', 'gem', 'hand', 'heart', 'miner', 'rock', 'seeker', 'shadow', 'shaper', 'stone', 'traveler', 'tunnel', 'vein', 'walker', 'whisper'],
+  
+  'Tortle': ['back', 'beak', 'claw', 'deep', 'diver', 'eye', 'fin', 'flipper', 'heart', 'keeper', 'shell', 'shield', 'slow', 'snap', 'swimmer', 'tide', 'walker', 'watcher', 'wise', 'year'],
+  
+  'Triton': ['caller', 'coral', 'current', 'deep', 'diver', 'fin', 'flow', 'foam', 'heart', 'reef', 'scale', 'sea', 'seeker', 'singer', 'speaker', 'tide', 'watcher', 'water', 'wave', 'weaver'],
+  
+  'Vampire (Legacy)': ['blood', 'born', 'count', 'drinker', 'fang', 'grave', 'heart', 'hunter', 'keepe', 'lord', 'night', 'seeker', 'shade', 'shadow', 'slayer', 'thirst', 'vein', 'watcher', 'whisper', 'wyrm'],
+  
+  'Vedalken': ['born', 'calculate', 'crafter', 'finder', 'former', 'hand', 'inventor', 'keeper', 'maker', 'mind', 'perfect', 'scholar', 'seeker', 'shaper', 'smith', 'thinker', 'thought', 'weaver', 'worker', 'wright'],
+  
+  'Warforged': ['born', 'built', 'cog', 'construct', 'creation', 'forge', 'form', 'frame', 'gear', 'heart', 'iron', 'made', 'mech', 'mind', 'plate', 'steel', 'unit', 'war', 'worker', 'wright'],
+  
+  'Yuan-Ti Pureblood': ['blood', 'coil', 'eye', 'fang', 'heart', 'hood', 'keeper', 'scale', 'seeker', 'serpent', 'shadow', 'slither', 'speaker', 'tongue', 'venom', 'viper', 'watcher', 'whisper', 'winder', 'wyrm']
+};
 
 // Helper function to get race-specific name components or default to human components
 export const getRaceNameComponents = (race) => {
