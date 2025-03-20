@@ -67,7 +67,7 @@ const questData = {
     { name: 'Competing Interest', desc: 'Others are trying to accomplish the same goal' },
     { name: 'False Information', desc: 'Critical details about the quest are wrong' },
     { name: 'Trap', desc: 'The entire quest is a setup to ensnare the party' },
-    { name: 'Public Scrutiny', desc: 'The party's actions are being closely watched' },
+    { name: 'Public Scrutiny', desc: 'The party\'s actions are being closely watched' },
     { name: 'Magical Interference', desc: 'Arcane forces disrupt normal operations' },
     { name: 'Divided Loyalties', desc: 'Party members have conflicting obligations' }
   ],
@@ -96,7 +96,7 @@ const questData = {
     { name: 'Noble Estate', desc: 'The home of a wealthy or influential family' },
     { name: 'Border Fortress', desc: 'A military structure defending a boundary' },
     { name: 'Cursed Village', desc: 'A settlement affected by dark magic' },
-    { name: 'Wizard's Tower', desc: 'The domain of a practitioner of the arcane' },
+    { name: 'Wizard\'s Tower', desc: 'The domain of a practitioner of the arcane' },
     { name: 'Desert Oasis', desc: 'A fertile area surrounded by arid wasteland' },
     { name: 'Coastal Town', desc: 'A settlement on the edge of the sea' },
     { name: 'Planar Gateway', desc: 'A point of connection between worlds' },
@@ -104,7 +104,7 @@ const questData = {
     { name: 'Monster Lair', desc: 'The home territory of dangerous creatures' },
     { name: 'Magical Academy', desc: 'A school for training spellcasters' },
     { name: 'Floating Island', desc: 'Land suspended in the air by magic or other means' },
-    { name: 'Thieves' Guild', desc: 'The headquarters of a criminal organization' },
+    { name: 'Thieves\' Guild', desc: 'The headquarters of a criminal organization' },
     { name: 'Battlefield', desc: 'A site of past or ongoing conflict' },
     { name: 'Trading Post', desc: 'A center for commerce in a frontier region' },
     { name: 'Sunken Ship', desc: 'A vessel that has gone down beneath the waves' }
@@ -138,7 +138,7 @@ const questData = {
     { name: 'Elderly Scholar', desc: 'An aged academic seeking assistance' },
     { name: 'Military Officer', desc: 'A ranking member of an armed force' },
     { name: 'Spirit or Apparition', desc: 'A supernatural entity requesting aid' },
-    { name: 'Childhood Friend', desc: 'Someone with a connection to a party member's past' },
+    { name: 'Childhood Friend', desc: 'Someone with a connection to a party member\'s past' },
     { name: 'Talking Animal', desc: 'A beast with the unusual ability to speak' },
     { name: 'Anonymous Letter', desc: 'Written instructions from an unknown source' }
   ]
