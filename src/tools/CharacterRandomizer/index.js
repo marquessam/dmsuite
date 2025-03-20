@@ -130,10 +130,18 @@ export default function CharacterRandomizer() {
     }));
   };
   
-  // Generate a character on component mount
+   // Generate a character on component mount
   useEffect(() => {
     generateCharacter();
   }, [generateCharacter]);
+  
+  // Update character when selections change
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (character) {
+      generateCharacter();
+    }
+  }, [selectedRace, selectedClass, selectedDeity]);
   
   // Update character when selections change
   useEffect(() => {
