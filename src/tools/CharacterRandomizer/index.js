@@ -82,6 +82,7 @@ export default function CharacterRandomizer() {
   };
   
   // Generate a character on component mount
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     generateCharacter();
   }, []);
