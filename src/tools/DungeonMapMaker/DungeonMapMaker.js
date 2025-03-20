@@ -2,8 +2,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { generateDungeon } from './mapGenerator';
 import MapLegend from './MapLegend';
-import EditingToolbar from './EditingToolbar';
-import PropertyPanel from './PropertyPanel';
 import { dungeonSizes, roomSizes, doorDensities, trapDensities, secretDoorDensities, dungeonThemes } from '../../data/dungeonMapData';
 
 export default function DungeonMapMaker() {
