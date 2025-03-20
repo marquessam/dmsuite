@@ -10,6 +10,7 @@ import DiceRoller from './DiceRoller';
 import NPCGenerator from './NPCGenerator';
 import TreasureGenerator from './TreasureGenerator';
 import WeatherGenerator from './WeatherGenerator';
+import RandomEncounterGenerator from './RandomEncounterGenerator';
 
 export default function DMScreen() {
   const [activeTab, setActiveTab] = useState('conditions');
@@ -106,6 +107,7 @@ export default function DMScreen() {
     { id: 'rules', name: 'Rules', icon: '📜' },
     { id: 'combat', name: 'Combat', icon: '⚔️' },
     { id: 'tracker', name: 'Encounter', icon: '👾' },
+    { id: 'encounters', name: 'Random Enc', icon: '🔮' },
     { id: 'items', name: 'Items', icon: '🎒' },
     { id: 'dice', name: 'Dice', icon: '🎲' },
     { id: 'npc', name: 'NPCs', icon: '👤' },
@@ -134,6 +136,8 @@ export default function DMScreen() {
         />;
       case 'tracker':
         return <EncounterTracker />;
+      case 'encounters':
+        return <RandomEncounterGenerator />;
       case 'dice':
         return <DiceRoller />;
       case 'npc':
