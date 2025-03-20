@@ -981,5 +981,5 @@ export const appearances = {
     "Serpentine with subtly mottled skin that reveals its true scaled nature only in certain lights, a habit of remaining perfectly still for long periods, and a gaze that can hold others in place through sheer intensity.",
     "Ophidian with a beautiful human face that occasionally shows subtle reptilian characteristics when they're not consciously hiding them, unusually flexible limbs, and the faint scent of exotic spices.",
     "Snake-descended with a perfect human disguise betrayed only by occasional flickers of a forked tongue, an unnatural smoothness to their movements, and eyes that never show genuine emotion."
-  }
+ ]
 };
