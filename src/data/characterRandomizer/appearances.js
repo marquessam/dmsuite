@@ -575,7 +575,7 @@ export const appearances = {
     "Angry with short, stubby fur, an oversized snout, and a constant snarl on its lips that shows off sharp, yellowed teeth.",
     "Ruthless with dark-brown fur, long, muscular arms, and eyes that gleam with the promise of violence."
 ],
-  'Avian': [
+  'Avian (Birdfolk)': [
     "Tall and slender with vibrant feathered wings, sharp talons, and piercing golden eyes that seem to see far beyond the horizon.",
     "Graceful with bright azure feathers covering its body, a long, elegant beak, and wings that flutter with an almost mystical ease.",
     "Powerful with dark plumage, a hooked beak, and muscular wings that allow it to soar with unmatched speed and precision.",
