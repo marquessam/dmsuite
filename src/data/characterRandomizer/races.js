@@ -2,7 +2,8 @@
 export const races = [
   'Human', 'Dwarf', 'Elf', 'Dark Elf', 'Halfling', 'Gnome', 
   'Orc', 'Ogre', 'Golem', 'Elemental', 'Dragonborn',
-  'Tabaxi (Catfolk)', 'Centaur', 'Pixie', 'Treant'
+  'Tabaxi (Catfolk)', 'Centaur', 'Pixie', 'Treant',
+  'Avian (Birdfolk)', 'Goblin', 'Gnoll', 'Lizardfolk'
 ];
 
 // Race descriptions
@@ -21,5 +22,9 @@ export const raceDescriptions = {
   'Tabaxi (Catfolk)': 'Curious and agile, tabaxi possess natural climbing abilities and lightning reflexes. Their feline grace is matched only by their wanderlust.',
   'Centaur': 'With the upper body of a humanoid and lower body of a horse, centaurs combine strength, speed, and intellect. Their connection to nature runs deep.',
   'Pixie': 'Tiny but magical, pixies possess innate spellcasting and flight. Their mischievous nature often leads them to play tricks on larger folk.',
-  'Treant': 'Ancient and wise, treants are living trees with immense strength and deep connection to forests. They speak slowly but think deeply.'
+  'Treant': 'Ancient and wise, treants are living trees with immense strength and deep connection to forests. They speak slowly but think deeply.',
+  'Avian (Birdfolk)': 'Blessed with wings and keen eyesight, avians combine the grace of birds with humanoid intelligence. Their diverse appearances reflect the many bird species they emulate, from colorful tropical types to sleek predatory raptors.',
+  'Goblin': 'Small and cunning, goblins are survivors above all else. What they lack in physical power they make up for with craftiness, trap-making, and surprising technical aptitude. They excel at scavenging and repurposing others\' discarded items.',
+  'Gnoll': 'Hyena-like humanoids with insatiable hunger and pack mentality. Gnolls possess incredible endurance and tracking skills, making them fearsome hunters. Their laughing calls strike fear into travelers of the wilderness.',
+  'Lizardfolk': 'Cold-blooded and pragmatic, lizardfolk possess natural armor, powerful jaws, and swimming prowess. They view the world through a lens of survival, with little regard for sentimentality or social niceties.'
 };
