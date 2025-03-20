@@ -10,9 +10,7 @@ import {
   features, 
   appearances, 
   deities, 
-  namePrefixes, 
-  nameSuffixes, 
-  lastNames 
+  getRaceNameComponents 
 } from '../../data/characterRandomizerData';
 
 export default function CharacterRandomizer() {
@@ -60,7 +58,7 @@ export default function CharacterRandomizer() {
     const charClass = getRandomItem(classes);
     const background = getRandomItem(backgrounds);
     const feature = getRandomItem(features);
-    const name = generateName();
+    const name = generateName(race);
     const appearance = appearances[race] ? getRandomItem(appearances[race]) : "A typical member of their race.";
     
     // Find suitable deities
