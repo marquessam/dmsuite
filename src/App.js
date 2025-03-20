@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Layout from './components/Layout';
+// This should resolve to either the direct file or the index.js in the directory
 import CharacterRandomizer from './tools/CharacterRandomizer';
 
 function App() {
