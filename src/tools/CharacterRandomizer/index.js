@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // Import all data from a single file
 import { 
@@ -19,20 +19,20 @@ export default function CharacterRandomizer() {
   const [character, setCharacter] = useState(null);
   
   // Get a random item from an array
-  const getRandomItem = (array) => {
+  const getRandomItem = useCallback((array) => {
     return array[Math.floor(Math.random() * array.length)];
-  };
+  }, []);
   
   // Generate a random name
-  const generateName = () => {
+  const generateName = useCallback(() => {
     const prefix = getRandomItem(namePrefixes);
     const suffix = getRandomItem(nameSuffixes);
     const lastName = getRandomItem(lastNames);
     return `${prefix}${suffix} ${lastName}`;
-  };
+  }, [getRandomItem]);
   
   // Find suitable deities for a character
-  const findDeities = (race, charClass) => {
+  const findDeities = useCallback((race, charClass) => {
     // Get deities that match either the race or class
     const matchingDeities = deities.filter(deity => 
       deity.followers.includes(race) || 
@@ -41,10 +41,10 @@ export default function CharacterRandomizer() {
     
     // Return matching deities or a random selection if none match
     return matchingDeities.length > 0 ? matchingDeities : [getRandomItem(deities)];
-  };
+  }, [getRandomItem]);
   
   // Generate a random character
-  const generateCharacter = () => {
+  const generateCharacter = useCallback(() => {
     console.log("Generating character...");
     console.log("Available races:", races);
     console.log("Available classes:", classes);
@@ -79,13 +79,12 @@ export default function CharacterRandomizer() {
       deity: primaryDeity,
       alternateDeities: alternateDeities
     });
-  };
+  }, [getRandomItem, generateName, findDeities]);
   
   // Generate a character on component mount
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     generateCharacter();
-  }, []);
+  }, [generateCharacter]);
   
   return (
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl">
