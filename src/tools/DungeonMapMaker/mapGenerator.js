@@ -1,10 +1,24 @@
 // src/tools/DungeonMapMaker/mapGenerator.js
-import seedrandom from 'seedrandom';
+// Simple seeded random number generator (no external dependencies)
+function createSeededRandom(seed) {
+  // Simple implementation of a seeded PRNG
+  let state = seed || Math.floor(Math.random() * 1000000);
+  
+  return function() {
+    // Simple PRNG algorithm (xorshift)
+    state ^= state << 13;
+    state ^= state >> 17;
+    state ^= state << 5;
+    
+    // Normalize to 0-1 range and ensure positive
+    return ((state < 0 ? ~state + 1 : state) % 1000000) / 1000000;
+  };
+}
 
 // Map Generation Logic
 export function generateDungeon(settings) {
   // Create a seeded random number generator
-  const rng = seedrandom(settings.seed.toString());
+  const rng = createSeededRandom(settings.seed);
   
   // Set up dungeon dimensions based on dungeon size
   let gridSize, width, height;
