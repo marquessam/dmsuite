@@ -1,9 +1,8 @@
 // src/tools/CharacterRandomizer/index.js
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
-// Import all data from a single file
+// Import all data from a single file - REMOVE races since we're using availableRaces
 import { 
-  races, 
   raceDescriptions, 
   classes, 
   classDescriptions, 
