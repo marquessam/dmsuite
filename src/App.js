@@ -1,9 +1,11 @@
+// src/App.js - Updated to include Dungeon Map Maker
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Layout from './components/Layout';
-// This should resolve to either the direct file or the index.js in the directory
+// Import the tools
 import CharacterRandomizer from './tools/CharacterRandomizer';
+import DungeonMapMaker from './tools/DungeonMapMaker';
 
 function App() {
   // State to track which tool is currently selected
@@ -11,11 +13,9 @@ function App() {
 
   // All available tools
   const tools = [
-    { id: 'character-randomizer', name: 'Character Randomizer' }
+    { id: 'character-randomizer', name: 'Character Randomizer' },
+    { id: 'dungeon-map-maker', name: 'Dungeon Map Maker' }
     // Add more tools here as they are developed
-    // { id: 'encounter-builder', name: 'Encounter Builder' },
-    // { id: 'npc-generator', name: 'NPC Generator' },
-    // etc.
   ];
 
   // Render the selected tool
@@ -23,7 +23,8 @@ function App() {
     switch (currentTool) {
       case 'character-randomizer':
         return <CharacterRandomizer />;
-      // Add cases for future tools
+      case 'dungeon-map-maker':
+        return <DungeonMapMaker />;
       default:
         return <CharacterRandomizer />;
     }
