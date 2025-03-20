@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 // Import all data from a single file
 import { 
@@ -135,13 +135,21 @@ export default function CharacterRandomizer() {
     generateCharacter();
   }, [generateCharacter]);
   
-  // Update character when selections change
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // Update character when selections change, but using a ref to avoid infinite loops
+  const firstRenderRef = useRef(true);
   useEffect(() => {
+    // Skip the first render to avoid double generation
+    if (firstRenderRef.current) {
+      firstRenderRef.current = false;
+      return;
+    }
+    
+    // Only regenerate if we have a character already
     if (character) {
       generateCharacter();
     }
-  }, [selectedRace, selectedClass, selectedDeity, character, generateCharacter]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedRace, selectedClass, selectedDeity]);
   
   return (
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl md:max-w-2xl">
