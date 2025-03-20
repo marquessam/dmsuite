@@ -983,4 +983,3 @@ export const appearances = {
     "Snake-descended with a perfect human disguise betrayed only by occasional flickers of a forked tongue, an unnatural smoothness to their movements, and eyes that never show genuine emotion."
   }
 };
-};
