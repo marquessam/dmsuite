@@ -8,6 +8,8 @@ import CombatPanel from './CombatPanel';
 import EncounterTracker from './EncounterTracker';
 import DiceRoller from './DiceRoller';
 import NPCGenerator from './NPCGenerator';
+import TreasureGenerator from './TreasureGenerator';
+import WeatherGenerator from './WeatherGenerator';
 
 export default function DMScreen() {
   const [activeTab, setActiveTab] = useState('conditions');
@@ -15,6 +17,7 @@ export default function DMScreen() {
   const [customReferences, setCustomReferences] = useState([]);
   const [pinnedItems, setPinnedItems] = useState([]);
   const [darkMode, setDarkMode] = useState(true); // Default to dark for DM screen
+  const [maximized, setMaximized] = useState(false);
   
   // Load saved data from localStorage when component mounts
   useEffect(() => {
@@ -32,6 +35,12 @@ export default function DMScreen() {
     if (savedPinned) {
       setPinnedItems(JSON.parse(savedPinned));
     }
+
+    // Remember last used tab
+    const savedTab = localStorage.getItem('dmscreen-active-tab');
+    if (savedTab) {
+      setActiveTab(savedTab);
+    }
   }, []);
   
   // Save data to localStorage when it changes
@@ -46,10 +55,19 @@ export default function DMScreen() {
   useEffect(() => {
     localStorage.setItem('dmscreen-pinned', JSON.stringify(pinnedItems));
   }, [pinnedItems]);
+
+  // Save active tab when it changes
+  useEffect(() => {
+    localStorage.setItem('dmscreen-active-tab', activeTab);
+  }, [activeTab]);
   
   // Handle adding a custom reference
   const addCustomReference = (reference) => {
-    setCustomReferences([...customReferences, reference]);
+    if (Array.isArray(reference)) {
+      setCustomReferences(reference);
+    } else {
+      setCustomReferences([...customReferences, reference]);
+    }
   };
   
   // Handle pinning an item for quick reference
@@ -77,36 +95,87 @@ export default function DMScreen() {
       [section]: content
     });
   };
+
+  // Toggle maximized view
+  const toggleMaximized = () => {
+    setMaximized(!maximized);
+  };
   
   const tabs = [
-    { id: 'conditions', name: 'Conditions' },
-    { id: 'rules', name: 'Rules' },
-    { id: 'combat', name: 'Combat' },
-    { id: 'items', name: 'Items' },
-    { id: 'tracker', name: 'Encounter' },
-    { id: 'dice', name: 'Dice' },
-    { id: 'npc', name: 'NPCs' },
-    { id: 'notes', name: 'Notes' }
+    { id: 'conditions', name: 'Conditions', icon: '🛡️' },
+    { id: 'rules', name: 'Rules', icon: '📜' },
+    { id: 'combat', name: 'Combat', icon: '⚔️' },
+    { id: 'tracker', name: 'Encounter', icon: '👾' },
+    { id: 'items', name: 'Items', icon: '🎒' },
+    { id: 'dice', name: 'Dice', icon: '🎲' },
+    { id: 'npc', name: 'NPCs', icon: '👤' },
+    { id: 'treasure', name: 'Treasure', icon: '💰' },
+    { id: 'weather', name: 'Weather', icon: '☁️' },
+    { id: 'notes', name: 'Notes', icon: '📝' }
   ];
 
+  // Render the content for the selected tab
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'conditions':
+        return <ConditionsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+      case 'rules':
+        return <RulesPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+      case 'combat':
+        return <CombatPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+      case 'items':
+        return <ItemsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+      case 'notes':
+        return <NotesPanel 
+          notes={notes} 
+          onSaveNotes={saveNotes}
+          customReferences={customReferences}
+          onAddReference={addCustomReference}
+        />;
+      case 'tracker':
+        return <EncounterTracker />;
+      case 'dice':
+        return <DiceRoller />;
+      case 'npc':
+        return <NPCGenerator />;
+      case 'treasure':
+        return <TreasureGenerator />;
+      case 'weather':
+        return <WeatherGenerator />;
+      default:
+        return <ConditionsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+    }
+  };
+
   return (
-    <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-full">
+    <div className={`p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 ${maximized ? 'max-w-full' : 'max-w-full md:max-w-5xl'}`}>
       <div className="flex flex-col sm:flex-row justify-between mb-4 items-center">
-        <h1 className="text-2xl font-bold text-amber-200 mb-2 sm:mb-0">DM Screen</h1>
+        <div className="flex items-center">
+          <h1 className="text-2xl font-bold text-amber-200 mb-2 sm:mb-0">DM Screen</h1>
+          <button 
+            className="ml-3 px-2 py-1 rounded-md bg-stone-800 hover:bg-stone-700 text-amber-100"
+            onClick={toggleMaximized}
+            title={maximized ? "Compact View" : "Maximize"}
+          >
+            {maximized ? "⏬" : "⏫"}
+          </button>
+        </div>
         
         {/* Tabs navigation */}
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 justify-center">
           {tabs.map(tab => (
             <button
               key={tab.id}
-              className={`px-3 py-1 text-sm rounded-md ${
+              className={`px-3 py-1 text-sm rounded-md flex items-center ${
                 activeTab === tab.id 
                   ? 'bg-amber-800 text-amber-100 font-medium' 
                   : 'bg-stone-800 text-amber-100/80 hover:bg-stone-700'
               }`}
               onClick={() => setActiveTab(tab.id)}
+              title={tab.name}
             >
-              {tab.name}
+              <span className="mr-1">{tab.icon}</span>
+              <span className="hidden md:inline">{tab.name}</span>
             </button>
           ))}
         </div>
@@ -115,6 +184,7 @@ export default function DMScreen() {
       {/* Pinned Items Bar */}
       {pinnedItems.length > 0 && (
         <div className="mb-4 p-2 bg-stone-800 rounded-lg border border-amber-900/20 flex flex-wrap gap-2">
+          <div className="text-xs text-amber-200/60 flex items-center mr-1">Pinned:</div>
           {pinnedItems.map((item, index) => (
             <div 
               key={`${item.type}-${item.id}-${index}`}
@@ -135,42 +205,7 @@ export default function DMScreen() {
       
       {/* Main content area */}
       <div className="bg-stone-800 p-4 rounded-lg border border-amber-900/20 min-h-[32rem]">
-        {activeTab === 'conditions' && (
-          <ConditionsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />
-        )}
-        
-        {activeTab === 'rules' && (
-          <RulesPanel onPin={togglePinItem} pinnedItems={pinnedItems} />
-        )}
-        
-        {activeTab === 'combat' && (
-          <CombatPanel onPin={togglePinItem} pinnedItems={pinnedItems} />
-        )}
-        
-        {activeTab === 'items' && (
-          <ItemsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />
-        )}
-        
-        {activeTab === 'notes' && (
-          <NotesPanel 
-            notes={notes} 
-            onSaveNotes={saveNotes}
-            customReferences={customReferences}
-            onAddReference={addCustomReference}
-          />
-        )}
-        
-        {activeTab === 'tracker' && (
-          <EncounterTracker />
-        )}
-        
-        {activeTab === 'dice' && (
-          <DiceRoller />
-        )}
-        
-        {activeTab === 'npc' && (
-          <NPCGenerator />
-        )}
+        {renderTabContent()}
       </div>
       
       <div className="mt-4 text-center">
