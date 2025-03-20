@@ -188,10 +188,6 @@ export default function DungeonMapMaker() {
   }, [selectedElement, roomNotes, showRoomDescriptions]);
   
   const drawCorridors = useCallback((ctx, corridors) => {
-    ctx.strokeStyle = '#ffffff';
-    ctx.lineWidth = 10;
-    ctx.lineCap = 'square';
-    
     corridors.forEach((corridor, index) => {
       const startX = corridor.start.x * ctx.canvas.width / 100;
       const startY = corridor.start.y * ctx.canvas.height / 100;
@@ -574,7 +570,7 @@ export default function DungeonMapMaker() {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    // Convert to percentage coordinates
+    // Convert to percentage coordinates for element placement
     const percentX = (x / canvas.width) * 100;
     const percentY = (y / canvas.height) * 100;
     
@@ -660,10 +656,6 @@ export default function DungeonMapMaker() {
   // Function to select an element under the cursor
   const selectElementAtPosition = (x, y) => {
     if (!dungeon) return;
-    
-    // Convert to percentage
-    const percentX = (x / canvasRef.current.width) * 100;
-    const percentY = (y / canvasRef.current.height) * 100;
     
     // Check proximity (how close user clicked to an element)
     const proximityThreshold = 10; // pixels
