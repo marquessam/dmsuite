@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
-// Import data
-import { races, raceDescriptions } from '../../data/characterRandomizer/races';
-import { classes, classDescriptions } from '../../data/characterRandomizer/classes';
-import { backgrounds } from '../../data/characterRandomizer/backgrounds';
-import { features } from '../../data/characterRandomizer/features';
-import { appearances } from '../../data/characterRandomizer/appearances';
-import { deities } from '../../data/characterRandomizer/deities';
-import { namePrefixes, nameSuffixes, lastNames } from '../../data/characterRandomizer/nameComponents';
+// Import all data from a single file
+import { 
+  races, 
+  raceDescriptions, 
+  classes, 
+  classDescriptions, 
+  backgrounds, 
+  features, 
+  appearances, 
+  deities, 
+  namePrefixes, 
+  nameSuffixes, 
+  lastNames 
+} from '../../data/characterRandomizerData.js';
 
 export default function CharacterRandomizer() {
   const [character, setCharacter] = useState(null);
@@ -37,8 +43,8 @@ export default function CharacterRandomizer() {
     return matchingDeities.length > 0 ? matchingDeities : [getRandomItem(deities)];
   };
   
-  // Generate a random character
-  const generateCharacter = () => {
+  // Generate a random character using useCallback
+  const generateCharacter = useCallback(() => {
     const race = getRandomItem(races);
     const charClass = getRandomItem(classes);
     const background = getRandomItem(backgrounds);
@@ -63,12 +69,12 @@ export default function CharacterRandomizer() {
       deity: primaryDeity,
       alternateDeities: alternateDeities
     });
-  };
+  }, []);
   
   // Generate a character on component mount
   useEffect(() => {
     generateCharacter();
-  }, []);
+  }, [generateCharacter]);
   
   return (
     <div className="p-6 bg-gradient-to-br from-gray-900 to-stone-800 rounded-lg shadow-lg border border-amber-900/30 text-gray-100 max-w-xl">
