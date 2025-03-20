@@ -147,19 +147,19 @@ export const treasureTemplates = [
     contents: '2d6 × 10 gold pieces, 3d6 × 10 silver pieces'
   },
   {
-    name: 'Merchant's Strongbox',
+    name: 'Merchant\'s Strongbox',
     value: 'medium',
-    description: 'A reinforced box containing a merchant's earnings.',
+    description: 'A reinforced box containing a merchant\'s earnings.',
     contents: '4d6 × 10 gold pieces, 1d4 gemstones worth 50gp each'
   },
   {
-    name: 'Adventurer's Pack',
+    name: 'Adventurer\'s Pack',
     value: 'medium',
     description: 'The remains of a less fortunate adventurer.',
     contents: '3d6 × 10 gold pieces, 1d4 potions, possibly a low-level magic item'
   },
   {
-    name: 'Noble's Cache',
+    name: 'Noble\'s Cache',
     value: 'high',
     description: 'Valuables hidden by someone of means.',
     contents: '6d6 × 10 gold pieces, 2d4 gemstones worth 100gp each, 1 piece of jewelry worth 250gp'
