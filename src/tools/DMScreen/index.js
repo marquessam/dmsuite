@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ConditionsPanel from './ConditionsPanel';
 import RulesPanel from './RulesPanel';
 import ItemsPanel from './ItemsPanel';
+import MagicItemsPanel from './MagicItemsPanel';
 import NotesPanel from './NotesPanel';
 import CombatPanel from './CombatPanel';
 import EncounterTracker from './EncounterTracker';
@@ -111,6 +112,7 @@ export default function DMScreen() {
     { id: 'encounters', name: 'Random Enc', icon: '🔮' },
     { id: 'quests', name: 'Quests', icon: '📜' },
     { id: 'items', name: 'Items', icon: '🎒' },
+    { id: 'magicitems', name: 'Magic Items', icon: '✨' },
     { id: 'dice', name: 'Dice', icon: '🎲' },
     { id: 'npc', name: 'NPCs', icon: '👤' },
     { id: 'treasure', name: 'Treasure', icon: '💰' },
@@ -129,6 +131,8 @@ export default function DMScreen() {
         return <CombatPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
       case 'items':
         return <ItemsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+      case 'magicitems':
+        return <MagicItemsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
       case 'notes':
         return <NotesPanel 
           notes={notes} 
