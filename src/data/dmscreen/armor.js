@@ -57,7 +57,7 @@ export const armorRules = [
   },
   {
     title: "Stealth Disadvantage",
-    description: "If the Armor table shows "Disadvantage" in the Stealth column, the wearer has disadvantage on Dexterity (Stealth) checks."
+    description: "If the Armor table shows \"Disadvantage\" in the Stealth column, the wearer has disadvantage on Dexterity (Stealth) checks."
   },
   {
     title: "Strength Requirement",
