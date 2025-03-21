@@ -4,7 +4,8 @@ import { conditionsData } from '../../data/dmScreenData';
 
 export default function ConditionsPanel({ onPin, pinnedItems }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedCondition, setExpandedCondition] = useState(null);
+  // Use a Set instead of a single value to track multiple expanded conditions
+  const [expandedConditions, setExpandedConditions] = useState(new Set());
   
   // Filter conditions based on search
   const filteredConditions = searchTerm
@@ -25,6 +26,19 @@ export default function ConditionsPanel({ onPin, pinnedItems }) {
       id: condition.name,
       type: 'condition',
       name: condition.name
+    });
+  };
+  
+  // Toggle a condition's expanded state
+  const toggleCondition = (conditionName) => {
+    setExpandedConditions(prevExpanded => {
+      const newExpanded = new Set(prevExpanded);
+      if (newExpanded.has(conditionName)) {
+        newExpanded.delete(conditionName);
+      } else {
+        newExpanded.add(conditionName);
+      }
+      return newExpanded;
     });
   };
   
@@ -59,7 +73,7 @@ export default function ConditionsPanel({ onPin, pinnedItems }) {
           >
             <div 
               className="flex justify-between items-center p-3 bg-stone-800 cursor-pointer"
-              onClick={() => setExpandedCondition(expandedCondition === condition.name ? null : condition.name)}
+              onClick={() => toggleCondition(condition.name)}
             >
               <h3 className="font-medium text-amber-100">{condition.name}</h3>
               <div className="flex gap-2">
@@ -74,12 +88,12 @@ export default function ConditionsPanel({ onPin, pinnedItems }) {
                   📌
                 </button>
                 <span className="text-xs text-amber-100/60">
-                  {expandedCondition === condition.name ? '▼' : '▶'}
+                  {expandedConditions.has(condition.name) ? '▼' : '▶'}
                 </span>
               </div>
             </div>
             
-            {expandedCondition === condition.name && (
+            {expandedConditions.has(condition.name) && (
               <div className="p-3 text-sm">
                 <p className="mb-2">{condition.description}</p>
                 {condition.effects && (
