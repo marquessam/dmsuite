@@ -3,8 +3,7 @@ import React, { useState, useMemo } from 'react';
 import { 
   itemsData, 
   weaponsData, 
-  armorData, 
-  magicItemsData 
+  armorData 
 } from '../../data/dmscreen';
 
 export default function ItemsPanel({ onPin, pinnedItems }) {
@@ -13,13 +12,12 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
   // Use a Set to track multiple expanded items
   const [expandedItems, setExpandedItems] = useState(new Set());
   
-  // Combine all item data
+  // Combine all regular item data (excluding magic items)
   const allItemData = useMemo(() => {
     return [
       ...itemsData,
       ...weaponsData, 
-      ...armorData, 
-      ...magicItemsData.filter(item => item.id !== 'scrolls') // Don't include magic item tables
+      ...armorData
     ];
   }, []);
   
@@ -85,7 +83,7 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
   return (
     <div>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-4">
-        <h2 className="text-xl font-semibold text-amber-200">Items Reference</h2>
+        <h2 className="text-xl font-semibold text-amber-200">Standard Equipment</h2>
         <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
           <select
             value={selectedCategory}
@@ -199,16 +197,6 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                             <span className="text-amber-100/70">Stealth:</span> {item.stealth}
                           </div>
                         )}
-                        {item.rarity && (
-                          <div>
-                            <span className="text-amber-100/70">Rarity:</span> {item.rarity}
-                          </div>
-                        )}
-                        {item.attunement && (
-                          <div>
-                            <span className="text-amber-100/70">Attunement:</span> {item.attunement ? "Required" : "Not required"}
-                          </div>
-                        )}
                       </div>
                       
                       {item.description && <p>{item.description}</p>}
@@ -227,7 +215,6 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                                 {item.items[0].ac && <th className="text-left p-1">AC</th>}
                                 {item.items[0].strength && <th className="text-left p-1">Str</th>}
                                 {item.items[0].stealth && <th className="text-left p-1">Stealth</th>}
-                                {item.items[0].rarity && <th className="text-left p-1">Rarity</th>}
                               </tr>
                             </thead>
                             <tbody>
@@ -241,7 +228,6 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                                   {subItem.ac && <td className="p-1">{subItem.ac}</td>}
                                   {subItem.strength && <td className="p-1">{subItem.strength}</td>}
                                   {subItem.stealth && <td className="p-1">{subItem.stealth}</td>}
-                                  {subItem.rarity && <td className="p-1">{subItem.rarity}</td>}
                                 </tr>
                               ))}
                             </tbody>
