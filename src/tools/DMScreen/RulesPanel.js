@@ -5,7 +5,8 @@ import { rulesData } from '../../data/dmScreenData';
 export default function RulesPanel({ onPin, pinnedItems }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedRule, setExpandedRule] = useState(null);
+  // Use a Set to track multiple expanded rules
+  const [expandedRules, setExpandedRules] = useState(new Set());
   
   // Get unique categories from rules data
   const categories = ['all', ...new Set(rulesData.map(rule => rule.category))];
@@ -33,6 +34,19 @@ export default function RulesPanel({ onPin, pinnedItems }) {
       id: rule.id,
       type: 'rule',
       name: rule.name
+    });
+  };
+
+  // Toggle a rule's expanded state
+  const toggleRule = (ruleId) => {
+    setExpandedRules(prevExpanded => {
+      const newExpanded = new Set(prevExpanded);
+      if (newExpanded.has(ruleId)) {
+        newExpanded.delete(ruleId);
+      } else {
+        newExpanded.add(ruleId);
+      }
+      return newExpanded;
     });
   };
 
@@ -81,7 +95,7 @@ export default function RulesPanel({ onPin, pinnedItems }) {
           >
             <div 
               className="flex justify-between items-center p-3 bg-stone-800 cursor-pointer"
-              onClick={() => setExpandedRule(expandedRule === rule.id ? null : rule.id)}
+              onClick={() => toggleRule(rule.id)}
             >
               <div>
                 <h3 className="font-medium text-amber-100">{rule.name}</h3>
@@ -99,12 +113,12 @@ export default function RulesPanel({ onPin, pinnedItems }) {
                   📌
                 </button>
                 <span className="text-xs text-amber-100/60">
-                  {expandedRule === rule.id ? '▼' : '▶'}
+                  {expandedRules.has(rule.id) ? '▼' : '▶'}
                 </span>
               </div>
             </div>
             
-            {expandedRule === rule.id && (
+            {expandedRules.has(rule.id) && (
               <div className="p-3 text-sm">
                 {rule.description && <p className="mb-2">{rule.description}</p>}
                 
