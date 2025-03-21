@@ -13,6 +13,7 @@ import TreasureGenerator from './TreasureGenerator';
 import WeatherGenerator from './WeatherGenerator';
 import RandomEncounterGenerator from './RandomEncounterGenerator';
 import QuestGenerator from './QuestGenerator';
+import ShopPanel from './ShopPanel';
 
 export default function DMScreen() {
   const [activeTab, setActiveTab] = useState('conditions');
@@ -111,6 +112,7 @@ export default function DMScreen() {
     { id: 'tracker', name: 'Encounter', icon: '👾' },
     { id: 'encounters', name: 'Random Enc', icon: '🔮' },
     { id: 'quests', name: 'Quests', icon: '📜' },
+    { id: 'shop', name: 'Shop', icon: '🏪' },
     { id: 'items', name: 'Items', icon: '🎒' },
     { id: 'magicitems', name: 'Magic Items', icon: '✨' },
     { id: 'dice', name: 'Dice', icon: '🎲' },
@@ -133,6 +135,8 @@ export default function DMScreen() {
         return <ItemsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
       case 'magicitems':
         return <MagicItemsPanel onPin={togglePinItem} pinnedItems={pinnedItems} />;
+      case 'shop':
+        return <ShopPanel />;
       case 'notes':
         return <NotesPanel 
           notes={notes} 
