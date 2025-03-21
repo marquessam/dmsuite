@@ -1,6 +1,11 @@
 // src/tools/DMScreen/ItemsPanel.js
-import React, { useState } from 'react';
-import { itemsData } from '../../data/dmScreenData';
+import React, { useState, useMemo } from 'react';
+import { 
+  itemsData, 
+  weaponsData, 
+  armorData, 
+  magicItemsData 
+} from '../../data/dmscreen';
 
 export default function ItemsPanel({ onPin, pinnedItems }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -8,30 +13,47 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
   // Use a Set to track multiple expanded items
   const [expandedItems, setExpandedItems] = useState(new Set());
   
-  // Get unique categories from items data
-  const categories = ['all', ...new Set(itemsData.map(item => item.category))];
+  // Combine all item data
+  const allItemData = useMemo(() => {
+    return [
+      ...itemsData,
+      ...weaponsData, 
+      ...armorData, 
+      ...magicItemsData.filter(item => item.id !== 'scrolls') // Don't include magic item tables
+    ];
+  }, []);
+  
+  // Get unique categories from combined items data
+  const categories = useMemo(() => {
+    const uniqueCategories = new Set(allItemData.map(item => item.category));
+    return ['all', ...uniqueCategories];
+  }, [allItemData]);
   
   // Filter items based on search and category
-  const filteredItems = itemsData.filter(item => {
-    const matchesSearch = searchTerm 
-      ? item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (item.description && item.description.toLowerCase().includes(searchTerm.toLowerCase()))
-      : true;
-    
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
+  const filteredItems = useMemo(() => {
+    return allItemData.filter(item => {
+      const matchesSearch = searchTerm 
+        ? (item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (item.description && item.description.toLowerCase().includes(searchTerm.toLowerCase())))
+        : true;
+      
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
+    });
+  }, [allItemData, searchTerm, selectedCategory]);
   
   // Group items by type within category
-  const groupedItems = filteredItems.reduce((acc, item) => {
-    const type = item.type || 'Miscellaneous';
-    if (!acc[type]) {
-      acc[type] = [];
-    }
-    acc[type].push(item);
-    return acc;
-  }, {});
+  const groupedItems = useMemo(() => {
+    return filteredItems.reduce((acc, item) => {
+      const type = item.type || 'Miscellaneous';
+      if (!acc[type]) {
+        acc[type] = [];
+      }
+      acc[type].push(item);
+      return acc;
+    }, {});
+  }, [filteredItems]);
   
   // Check if an item is pinned
   const isItemPinned = (id) => {
@@ -167,12 +189,12 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                             <span className="text-amber-100/70">AC:</span> {item.ac}
                           </div>
                         )}
-                        {item.strength && (
+                        {item.strength && item.strength !== "" && (
                           <div>
                             <span className="text-amber-100/70">Strength:</span> {item.strength}
                           </div>
                         )}
-                        {item.stealth && (
+                        {item.stealth && item.stealth !== "" && (
                           <div>
                             <span className="text-amber-100/70">Stealth:</span> {item.stealth}
                           </div>
@@ -182,9 +204,50 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                             <span className="text-amber-100/70">Rarity:</span> {item.rarity}
                           </div>
                         )}
+                        {item.attunement && (
+                          <div>
+                            <span className="text-amber-100/70">Attunement:</span> {item.attunement ? "Required" : "Not required"}
+                          </div>
+                        )}
                       </div>
                       
                       {item.description && <p>{item.description}</p>}
+                      
+                      {/* Display individual items for item groups */}
+                      {item.items && item.items.length > 0 && (
+                        <div className="mt-3">
+                          <table className="w-full text-xs">
+                            <thead>
+                              <tr className="bg-stone-800/50">
+                                <th className="text-left p-1">Name</th>
+                                {item.items[0].cost && <th className="text-left p-1">Cost</th>}
+                                {item.items[0].damage && <th className="text-left p-1">Damage</th>}
+                                {item.items[0].weight && <th className="text-left p-1">Weight</th>}
+                                {item.items[0].properties && <th className="text-left p-1">Properties</th>}
+                                {item.items[0].ac && <th className="text-left p-1">AC</th>}
+                                {item.items[0].strength && <th className="text-left p-1">Str</th>}
+                                {item.items[0].stealth && <th className="text-left p-1">Stealth</th>}
+                                {item.items[0].rarity && <th className="text-left p-1">Rarity</th>}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {item.items.map((subItem, index) => (
+                                <tr key={index} className={index % 2 === 0 ? 'bg-stone-800/20' : ''}>
+                                  <td className="p-1">{subItem.name}</td>
+                                  {subItem.cost && <td className="p-1">{subItem.cost}</td>}
+                                  {subItem.damage && <td className="p-1">{subItem.damage}</td>}
+                                  {subItem.weight && <td className="p-1">{subItem.weight}</td>}
+                                  {subItem.properties && <td className="p-1">{subItem.properties}</td>}
+                                  {subItem.ac && <td className="p-1">{subItem.ac}</td>}
+                                  {subItem.strength && <td className="p-1">{subItem.strength}</td>}
+                                  {subItem.stealth && <td className="p-1">{subItem.stealth}</td>}
+                                  {subItem.rarity && <td className="p-1">{subItem.rarity}</td>}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
                       
                       {item.notes && (
                         <div className="mt-2 p-2 bg-stone-800/50 rounded-md text-amber-100/80 italic">
