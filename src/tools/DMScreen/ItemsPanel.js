@@ -5,7 +5,8 @@ import { itemsData } from '../../data/dmScreenData';
 export default function ItemsPanel({ onPin, pinnedItems }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedItem, setExpandedItem] = useState(null);
+  // Use a Set to track multiple expanded items
+  const [expandedItems, setExpandedItems] = useState(new Set());
   
   // Get unique categories from items data
   const categories = ['all', ...new Set(itemsData.map(item => item.category))];
@@ -43,6 +44,19 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
       id: item.id,
       type: 'item',
       name: item.name
+    });
+  };
+
+  // Toggle an item's expanded state
+  const toggleItem = (itemId) => {
+    setExpandedItems(prevExpanded => {
+      const newExpanded = new Set(prevExpanded);
+      if (newExpanded.has(itemId)) {
+        newExpanded.delete(itemId);
+      } else {
+        newExpanded.add(itemId);
+      }
+      return newExpanded;
     });
   };
 
@@ -98,7 +112,7 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                 >
                   <div 
                     className="flex justify-between items-center p-3 bg-stone-800 cursor-pointer"
-                    onClick={() => setExpandedItem(expandedItem === item.id ? null : item.id)}
+                    onClick={() => toggleItem(item.id)}
                   >
                     <div className="flex items-center">
                       <h4 className="font-medium text-amber-100">{item.name}</h4>
@@ -120,12 +134,12 @@ export default function ItemsPanel({ onPin, pinnedItems }) {
                         📌
                       </button>
                       <span className="text-xs text-amber-100/60">
-                        {expandedItem === item.id ? '▼' : '▶'}
+                        {expandedItems.has(item.id) ? '▼' : '▶'}
                       </span>
                     </div>
                   </div>
                   
-                  {expandedItem === item.id && (
+                  {expandedItems.has(item.id) && (
                     <div className="p-3 text-sm">
                       <div className="flex flex-wrap gap-x-4 gap-y-1 mb-2 text-xs">
                         {item.category && (
